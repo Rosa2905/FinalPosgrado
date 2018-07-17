@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::prefix('usuarios')->group(function() {
 	Route::get('alumno','AlumnoController@index');
 	Route::get('create','AlumnoController@create');
+	Route::post('create','AlumnoController@store')->name('create');
 	Route::get('alumno/{id}/edit','AlumnoController@edit');
 	Route::get('alumno/{id}/mas','AlumnoController@show');
 	Route::patch('alumno/edit/{id}','AlumnoController@update')->name('upedit');

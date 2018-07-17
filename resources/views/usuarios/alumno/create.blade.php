@@ -15,7 +15,7 @@
 			</div>
 			@endif
 
-			{!!Form::open(['url'=>'usuarios/create','method'=>'POST','autocomplete'=>'off'])!!}
+			{!!Form::open(['route'=>['create'],'method'=>'POST','autocomplete'=>'off'])!!}
 			{{Form::token()}}
 
 {{--  @extends('layouts.alumno')
@@ -59,6 +59,13 @@
 			<div class="form-group">
 				<label for="Telefono">Telefono</label>
 				<input type="text" name="Telefono" class="form-control" placeholder="">
+			</div>
+
+			<br>
+			<br>
+			<div class="form-group">
+				<label for="corte">Corte</label>
+				<input type="text" name="Corte" class="form-control" placeholder="">
 			</div>
 
 			<br>
