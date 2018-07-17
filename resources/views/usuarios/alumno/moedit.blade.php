@@ -19,7 +19,7 @@ role="dialog" tabindex="-1" id="modal-edit">
 
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        {{-- <button type="submit" class="btn btn-primary">Confirmar</button> Hola--}}
+        {{-- <button type="submit" class="btn btn-primary">Confirmar</button> Adios--}}
       </div>
     </div>
   </div>
