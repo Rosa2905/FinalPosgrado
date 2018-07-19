@@ -9,20 +9,19 @@ $factory->define(App\Alum::class, function (Faker $faker) {
         'correo' => $faker->unique()->safeEmail,
         'telefono' => $faker->phoneNumber,
         'matricula'=>'123',
-        'CVU'=>'14253',
+        'CVU'=>'assads',
         'corte' => 'uno',
         'director' => 'palafix',
         'codirector' => 'pinto',
         'campus' => 'Tijuana',
         'carrera'=> 'Compu',
         'LGAC' => 'LGAC',
-        'grado' => 'uno',
+        'grado' => 'MI',
         'fecha_ingreso' => $faker ->date,
         'fecha_egreso' => $faker->date,
         'fecha_ideal'=>$faker->date,
-        'estatus'=> 'disponible',
+        'estatus'=> 'Vigente',
         'SAGCC'=>'SAGCC',
-        'estatus'=> 'disponible',
         'foto'=>$faker->image
     ];
 });

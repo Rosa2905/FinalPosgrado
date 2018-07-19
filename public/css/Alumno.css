@@ -83,7 +83,7 @@ input[type=text]:focus {
 }
 
 input[type=text]{
-    width: 120px;
+  
     box-sizing: border-box;
     border: 2px solid #00CC00;
     border-radius: 4px;

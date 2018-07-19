@@ -65,12 +65,12 @@ class AlumnoController extends Controller
 		$alumno->campus="uno";
 		$alumno->carrera="uno";
 		$alumno->LGAC="uno";
-		$alumno->grado="uno";
+		$alumno->grado="MI";
 		$alumno->corte="uno";
-		$alumno->estatus="uno";
-		$alumno->fecha_ingreso="uno";
-		$alumno->fecha_egreso="uno";
-		$alumno->fecha_ideal="uno";
+		$alumno->estatus="Vigente";
+		$alumno->fecha_ingreso="2018-07-19";
+		$alumno->fecha_egreso="2018-07-19";
+		$alumno->fecha_ideal="2018-07-19";
 		$alumno->foto="uno";
 		$alumno->SAGCC="uno";
 		$alumno->save();
@@ -128,7 +128,7 @@ class AlumnoController extends Controller
         $Alumno->apellido_materno=$request->get('apellido_materno');
 		$Alumno->CVU=$request->get('CVU');
 		$Alumno->correo=$request->get('correo');
-		$Alumno->corte=$request->get('Corte');
+		// $Alumno->corte=$request->get('Corte');
         $Alumno->update();
         // return Redirect::to('usuarios/alumno');
         return $Alumno->nombre;

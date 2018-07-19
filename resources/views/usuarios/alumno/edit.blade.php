@@ -33,31 +33,31 @@
 
             <div class="form-group" id="apellidoP">
                 <label for="apellidoP">Apellido P.</label>
-                <input type="text" name="apellido_paterno" class="form-control" value="{{$Alumno->apellido_paterno}}" placeholder="Nombre...">
+                <input type="text" name="apellido_paterno" class="form-control" value="{{$Alumno->apellido_paterno}}" placeholder="ApellidoP...">
             </div>
 
                <div class="form-group" id="apellidoM">
                 <label for="apellidoM">Apellido M.</label>
-                <input type="text" name="apellido_materno" class="form-control" value="{{$Alumno->apellido_materno}}" placeholder="Nombre...">
+                <input type="text" name="apellido_materno" class="form-control" value="{{$Alumno->apellido_materno}}" placeholder="ApellidoM...">
             </div>
 
             <div class="form-group" id="matricula">
                 <label for="matricula">Matricula</label>
-                <input type="text" name="matricula" class="form-control" value="{{$Alumno->id}}" placeholder="Nombre...">
+                <input type="number" name="matricula" class="form-control" value="{{$Alumno->id}}" placeholder="Matricula...">
             </div>
             <div class="form-group" id="cvu">
                 <label for="cvu">CVU</label>
-                <input type="text" name="CVU" class="form-control" value="{{$Alumno->CVU}}" placeholder="Nombre...">
+                <input type="text" name="CVU" class="form-control" value="{{$Alumno->CVU}}" placeholder="CVU...">
             </div>
 
             <div class="form-group" id="telefono">
                 <label for="Telefono">Telefono</label>
-                <input type="text" name="telefono" class="form-control" value="{{$Alumno->telefono}}" placeholder="Nombre...">
+                <input type="number" name="telefono" class="form-control" value="{{$Alumno->telefono}}" placeholder="Telefono">
             </div>
 
             <div class="form-group" id="correo">
                 <label for="Correo">Correo</label>
-                <input type="text" name="correo" class="form-control" value="{{$Alumno->correo}}">
+                <input type="email" name="correo" class="form-control" value="{{$Alumno->correo}}">
             </div>
             {{-- <div class="form-group">
                 <label for="descripcion">Descripción</label>
@@ -121,27 +121,28 @@ h3 {
 
 #cvu{
     position: absolute;
+    top: 260px;
+    left: 490px;
+}
+
+
+#correo {
+   position: absolute;
+    top: 260px;
+    left: 490px;
+}
+
+#correo {
+     position: absolute;
     top: 170px;
     left: 490px;
-}
 
-
-#correo {
-   position: absolute;
-    top: 260px;
-    left: 490px;
-}
-
-#correo {
-   position: absolute;
-    top: 260px;
-    left: 490px;
 }
 
 #telefono{
     position: absolute;
     top: 80px;
-    left: 670px;
+    left: 700px;
 }
 
 #botones{

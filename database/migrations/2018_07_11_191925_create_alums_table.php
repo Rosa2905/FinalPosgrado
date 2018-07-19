@@ -18,8 +18,8 @@ class CreateAlumsTable extends Migration
             $table->string('nombre');
             $table->string('apellido_paterno');
             $table->string('apellido_materno');
-            $table->string('correo');
-            $table->string('matricula');
+            $table->string('correo')->unique();
+            $table->integer('matricula');
             $table->string('CVU');
             $table->string('telefono');
             $table->string('corte');
@@ -28,13 +28,13 @@ class CreateAlumsTable extends Migration
             $table->string('campus');
             $table->string('carrera');
             $table->string('LGAC');
-            $table->string('grado');
-            $table->string('fecha_ingreso');
-            $table->string('fecha_egreso');
-            $table->string('fecha_ideal');
-            $table->string('estatus');
+            $table->enum('grado', ['MI','MC','DI','DC']);
+            $table->date('fecha_ingreso');
+            $table->date('fecha_egreso');
+            $table->date('fecha_ideal');
+            $table->enum('estatus', ['Vigente', 'Bajo','Tesista']);
             $table->string('SAGCC');
-            $table->string('foto');
+            $table->binary('foto');
             $table->timestamps();
             
         //     'Matricula',
