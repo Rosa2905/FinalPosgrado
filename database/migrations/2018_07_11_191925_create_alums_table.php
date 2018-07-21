@@ -35,6 +35,7 @@ class CreateAlumsTable extends Migration
             $table->enum('estatus', ['Vigente', 'Bajo','Tesista']);
             $table->string('SAGCC');
             $table->binary('foto');
+            // $table->boolean('verified')->default('false');
             $table->timestamps();
             
         //     'Matricula',

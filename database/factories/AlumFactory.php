@@ -22,7 +22,8 @@ $factory->define(App\Alum::class, function (Faker $faker) {
         'fecha_ideal'=>$faker->date,
         'estatus'=> 'Vigente',
         'SAGCC'=>'SAGCC',
-        'foto'=>$faker->image
+        'foto'=>$faker->image,
+        
     ];
 });
      // $table->string('nombre');

@@ -51,7 +51,8 @@ class AlumnoController extends Controller
 
 
 	public function store(AlumnoRequest $request){
-		$alumno= new Alum;
+
+		$alumno= new Alum;	 
 		$alumno->matricula=$request->get('Matricula');
 		$alumno->CVU=$request->get('CVU');
 		$alumno->nombre=$request->get('Nombre');
@@ -71,8 +72,10 @@ class AlumnoController extends Controller
 		$alumno->fecha_ingreso="2018-07-19";
 		$alumno->fecha_egreso="2018-07-19";
 		$alumno->fecha_ideal="2018-07-19";
-		$alumno->foto="uno";
+		$alumno->foto=$request->get('imagen');
+		// Image::make(input::file('foto')->resize(300,200)->save(foo.jpg));
 		$alumno->SAGCC="uno";
+		// $alumno->verified="false";
 		$alumno->save();
 
 		// $alumno= new Alum;
@@ -139,5 +142,6 @@ class AlumnoController extends Controller
 	public function destroy($id){
 
 	}
+
 
 }

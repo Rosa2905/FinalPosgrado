@@ -21,7 +21,7 @@
 			</div>
 			@endif
 
-			{!!Form::open(['route'=>['create'],'method'=>'POST','autocomplete'=>'off'])!!}
+			{!!Form::open(['route'=>['create'],'method'=>'POST','autocomplete'=>'off' ])!!}
 			{{Form::token()}}
 
 {{--  @extends('layouts.alumno')
@@ -94,6 +94,7 @@
 
 	<a href="#" ><img class="imagen"   width=80%" src="{{ asset('imagen/esta.png') }}"></a>
 	<input  type="file" name="imagen"  class="subir">
+{{-- 	Image::make(input::file('photo')->resize(300,200)->save(foo.jpg)) --}}
 
 	<div class="form-group">
 		<button class="btn btn-primary" type="submit">Guardar</button>

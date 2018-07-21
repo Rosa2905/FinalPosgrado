@@ -28,4 +28,14 @@ class AlumnoRequest extends FormRequest
             //
      ];
     }
+
+
+        public function postNewImage(AlumnoRequest $request){
+        $this->validate($request,[
+            'photo'=>'required|image'
+        ]);
+
+    }
 }
+
+
