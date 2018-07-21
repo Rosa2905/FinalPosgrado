@@ -78,8 +78,9 @@ body {
 }
 
 
-input[type=text]:focus {
+/*input[type=text]:focus {
     width: 60%;
+   
 }
 
 input[type=text]{
@@ -97,19 +98,111 @@ input[type=text]{
     margin-top: 15px;
     margin-bottom: 15px;
 }
-
-/*input[type=text] {
-
-  width: 120px;
-    box-sizing: border-box;
-    border: 2px solid #00CC00;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-repeat: no-repeat;
-    
-    margin-top: 15px;
-    margin-bottom: 15px;
-
-  }
 */
+.eleccion
+{
+
+  font-family: "ABeeZee", ABeeZee-italic;
+  text-shadow: 3px 1.2px 2px white;
+  background:#c5e1a5;
+  color: #000000;
+  font-size: 1.3em;
+  border-color:black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  border: 2.2px solid #81c784;
+  font-weight:bold;
+  height: 30px
+}
+
+.eleccion1{
+  text-shadow: 3px 1.2px 2px white;
+  top: -480px;
+  position: relative;
+  left: 290px;
+  color: #000000;
+  font-size: 1.0em;
+
+  
+}
+
+.eleccion2{
+  
+  top: -590px;
+  position: relative;
+  left: 550px;
+  color: #000000;
+  font-size: 1.0em;
+}
+
+.Grado{
+
+  font-family: "ABeeZee", ABeeZee-italic;
+  background:#c5e1a5;
+  color: #000000;
+  font-size: 1.3em;
+  border-color:black;
+}
+.imagen{
+  position: absolute;
+  top: 80px;
+  left: 1000px;
+  border-image-slice: 20;
+}
+
+.ideal
+{
+  font-size:16px;
+  left:490px;
+  color: red;
+  display: inline-block;
+    border-radius: 4px;
+}
+
+
+.boton{
+  position: relative;
+  top: -1130px;
+  left: 600px;
+  font-size:18px;
+    font-family: "ABeeZee", ABeeZee-italic;
+  text-shadow: 2.5px 1.2px 2px white;
+  font-weight:bold;
+  background:#aed581;
+    width:143px;
+    height:32px;
+    cursor: pointer;
+    border: 3px solid #81c784;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.subir
+{
+  position: absolute;
+  top: 510px;
+  left: 380px;
+  background:#c5e1a5;
+  font-size:16px;
+    font-family: "ABeeZee", ABeeZee-italic;
+  font-weight:bold;
+  border: 1.5px solid #81c784;
+}
+
+
+.dir
+{
+  position: relative;
+  top: -480px;
+  left: 290px;
+  display: inline-block;
+    border-radius: 4px;
+}
+
+
+.lafein
+{
+  position: relative;
+  top: -820px;
+  left: 555px;
+}

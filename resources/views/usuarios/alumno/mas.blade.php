@@ -36,7 +36,9 @@
         
   
         <tr> 
-           <td><img src="{{ asset('storage/'.$Alumno->foto) }}" alt="{{ $Alumno->nombre }}" height="100px" width="100px" class="img-thumbnail"></td>
+           <td><img src="{{ asset('assets/images/'.$Alumno->foto) }}" alt="{{ $Alumno->nombre }}" height="100px" width="100px" class="img-thumbnail"></td>
+
+          
             <td>{{$Alumno->codirector}}</td>
             <td>{{$Alumno->carrera}}</td>
             <td>{{$Alumno->grado}}</td>
