@@ -23,7 +23,7 @@
             {{Form::token()}}
         
              <div class="form-group" id="foto">
-                <img src="{{ asset('imagen/'.$Alumno->foto) }}" alt="{{ $Alumno->nombre}}" height="100px" width="100px" class="img-thumbnail">
+                <img width="100px" src="{{ asset('/storage/'.$Alumno->imagenes) }}"  alt="{{ $Alumno->nombre}}" class="img-thumbnail">
             </div>
 
             <div class="form-group" id="nombre">

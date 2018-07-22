@@ -36,10 +36,11 @@
         
   
         <tr> 
-           <td><img src="{{ asset('storage/'.$Alumno->foto) }}" alt="{{ $Alumno->nombre }}" height="100px" width="100px" class="img-thumbnail"></td>
-
-          
-            <td>{{$Alumno->codirector}}</td>
+      {{--      <td><img src="{{ asset('/storage/'.$Alumno->foto) }}" alt="{{ $Alumno->nombre }}" height="100px" width="100px" class="img-thumbnail"></td> --}}
+            <td><img width="100px" src="{{ asset('/storage/'.$Alumno->imagenes) }}"  class="img-thumbnail"></td>
+                   
+{{--             <td><img width="100px" src="/storage/larga.png"  class="img-thumbnail"></td>
+ --}}            <td>{{$Alumno->codirector}}</td>
             <td>{{$Alumno->carrera}}</td>
             <td>{{$Alumno->grado}}</td>
             <td>{{$Alumno->corte}}</td>

@@ -21,7 +21,7 @@
 			</div>
 			@endif
 
-			{!!Form::open(['route'=>['create'],'method'=>'POST','autocomplete'=>'off' ])!!}
+			{!!Form::open(['route'=>['create'],'method'=>'POST','autocomplete'=>'off','enctype'=>"multipart/form-data"])!!}
 			{{Form::token()}}
 
 {{--  @extends('layouts.alumno')
