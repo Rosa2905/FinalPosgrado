@@ -73,13 +73,13 @@ class AlumnoController extends Controller
 		$alumno->fecha_egreso="2018-07-19";
 		$alumno->fecha_ideal="2018-07-19";
 		$alumno->foto="201";
-		$alumno->imagenes=$request->file('imagen')->storeAs('public',$alumno->correo); 
-		$alumno->imagenes=$alumno->correo; 
+		$alumno->imagenes=$request->file('imagen')->storeAs('public',$alumno->correo);   
 		// Image::make(input::file('foto')->resize(300,200)->save(foo.jpg));
 		$alumno->SAGCC="uno";
 		// $alumno->verified="false";
+		$alumno->imagenes=$alumno->correo;
 		$alumno->save();
-
+		
 		// $alumno= new Alum;
 		// $alumno->matricula=$request->get('Matricula');
 		// $alumno->CVU=$request->get('CVU');
