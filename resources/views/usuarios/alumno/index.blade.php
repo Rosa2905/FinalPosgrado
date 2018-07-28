@@ -22,7 +22,7 @@
             <th class="info">Correo</th>
             <th>Grado</th>
             <th>Dir.Tesis</th>
-            <th>Ingreso</th>
+            <th >Ingreso</th>
             <th>Fijada</th>
            <th class="info">ACCION</th>           
           </tr>

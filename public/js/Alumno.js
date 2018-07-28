@@ -37,6 +37,11 @@
             $("#datos_personales").click(function(){
                     location.href='alumno/'+data.id+'/edit'   
               });
+            
+             $("#datos_posgrado").click(function(){
+                    location.href='alumno/'+data.id+'/editP'   
+              });
+
 
             // console.log(data.id);
             

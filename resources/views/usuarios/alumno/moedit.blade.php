@@ -15,7 +15,7 @@ role="dialog" tabindex="-1" id="modal-edit">
         <input type="button" id="datos_personales" class="btn btn-primary" value="Datos Personales" />
         <input type="button" id="datos_posgrado" class="btn btn-primary" value="Datos Posgrado" />
 
-        {{-- <input type="button" onclick="location.href='https://www.youtube.com';" class="btn btn-primary" value="Datos Posgrado" /></center> --}}
+       {{--  <input type="button" onclick="location.href='https://www.youtube.com';" class="btn btn-primary" value="Datos Posgrado" /></center> --}}
 
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

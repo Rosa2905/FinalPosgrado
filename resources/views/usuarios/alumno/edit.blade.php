@@ -8,7 +8,7 @@
 
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <h3><b>Alumno:</b> {{ $Alumno->nombre}}</h3>
+            <h3 class="text-danger">Alumno:  {{ $Alumno->nombre}}</h3>
             @if (count($errors)>0)
             <div class="alert alert-danger">
                 <ul>
@@ -24,57 +24,53 @@
         
              <div class="form-group" id="foto">
                 <img width="100px" src="{{ asset('/storage/'.$Alumno->imagenes) }}"  alt="{{ $Alumno->nombre}}" class="img-thumbnail">
+                <input  type="file" name="imagen"  class="subir" id="subir">
             </div>
 
             <div class="form-group" id="nombre">
                 <label for="Nombre">Nombre</label>
                 <input type="text" name="nombre" class="form-control" value="{{$Alumno->nombre}}" placeholder="Nombre...">
-            </div>
-
-            <div class="form-group" id="apellidoP">
                 <label for="apellidoP">Apellido P.</label>
                 <input type="text" name="apellido_paterno" class="form-control" value="{{$Alumno->apellido_paterno}}" placeholder="ApellidoP...">
-            </div>
-
-               <div class="form-group" id="apellidoM">
                 <label for="apellidoM">Apellido M.</label>
                 <input type="text" name="apellido_materno" class="form-control" value="{{$Alumno->apellido_materno}}" placeholder="ApellidoM...">
             </div>
 
+
+            
             <div class="form-group" id="matricula">
                 <label for="matricula">Matricula</label>
                 <input type="number" name="matricula" class="form-control" value="{{$Alumno->id}}" placeholder="Matricula...">
-            </div>
-            <div class="form-group" id="cvu">
-                <label for="cvu">CVU</label>
+                 <label for="cvu">CVU</label>
                 <input type="text" name="CVU" class="form-control" value="{{$Alumno->CVU}}" placeholder="CVU...">
             </div>
-
-            <div class="form-group" id="telefono">
-                <label for="Telefono">Telefono</label>
-                <input type="number" name="telefono" class="form-control" value="{{$Alumno->telefono}}" placeholder="Telefono">
-            </div>
-
+           
+        
             <div class="form-group" id="correo">
                 <label for="Correo">Correo</label>
                 <input type="email" name="correo" class="form-control" value="{{$Alumno->correo}}">
+                <label for="Telefono">Telefono</label>
+                <input type="number" name="telefono" class="form-control" value="{{$Alumno->telefono}}" placeholder="Telefono">
+                <div class="form-group" id="botones">
+                <button class="btn btn-success" type="submit">Guardar</button>
+                <button class="btn btn-danger" type="reset">Cancelar</button>
+            </div> 
+
             </div>
+
+
             {{-- <div class="form-group">
                 <label for="descripcion">Descripción</label>
                 <input type="text" name="descripcion" class="form-control" value="{{$categoria->descripcion}}" placeholder="Descripción...">
             </div> --}}
-            <div class="form-group" id="botones">
-                <button class="btn btn-success" type="submit">Guardar</button>
-                <button class="btn btn-danger" type="reset">Cancelar</button>
-            </div> 
+            
                      
         </div>
 
             {!!Form::close()!!}     
     </div>
-
- @endsection   
-
+   
+ @endsection
 
 
 <style>
@@ -86,69 +82,52 @@ h3 {
     
 }
 
-
-
 #foto{
-    position: absolute;
+    position: relative;
     top: 100px;
     left: 100px;
 }
 
 #nombre{
-    position: absolute;
-    top: 80px;
-    left: 300px;
-   
+    width: 22%;
+    position: relative;
+    top: -85px;
+    left: 400px;  
 }
 
-#apellidoP{
-    position: absolute;
-    top: 170px;
-    left: 300px;
-}
 
-#apellidoM{
-    position: absolute;
-    top: 260px;
-    left: 300px;
-}
 
 #matricula{
-    position: absolute;
-    top: 80px;
-    left: 490px;
+    width: 22%;
+    position: relative;
+    top: -350px;
+    left: 600px;
 }
 
-#cvu{
-    position: absolute;
-    top: 260px;
-    left: 490px;
-}
 
 
 #correo {
-   position: absolute;
-    top: 260px;
-    left: 490px;
-}
-
-#correo {
-     position: absolute;
-    top: 170px;
-    left: 490px;
+    width: 40%;
+    position: relative;
+    top: -525px;
+    left: 800px;
 
 }
-
-#telefono{
-    position: absolute;
-    top: 80px;
-    left: 700px;
-}
-
 #botones{
-    position: absolute;
-    top: 300px;
-    left: 80px;
+    position: relative;
+    top: 50px;
+    left: -200px;
+}
+
+#subir{
+    width: 40%;
+    position: relative;
+    top: 70px;
+    left: -50px;
+}
+h3{
+font-size: 30px;
+text-shadow: 1px 1px 2px #000000;
 }
 </style>
 

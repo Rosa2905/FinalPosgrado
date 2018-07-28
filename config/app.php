@@ -148,6 +148,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -214,6 +215,8 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
         'Image' =>Intervention\Image\Facades\Image::class,
+        'Carbon' => 'Carbon\Carbon',
+         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
 
     ],
 

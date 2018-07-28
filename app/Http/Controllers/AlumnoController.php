@@ -5,7 +5,7 @@ use App\Alum;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\AlumnoRequest;
-
+use Alert;
 
 use DB;
 
@@ -79,29 +79,6 @@ class AlumnoController extends Controller
 		// $alumno->verified="false";
 		$alumno->imagenes=$alumno->correo;
 		$alumno->save();
-		
-		// $alumno= new Alum;
-		// $alumno->matricula=$request->get('Matricula');
-		// $alumno->CVU=$request->get('CVU');
-		// $alumno->nombre=$request->get('Nombre');
-		// $alumno->apellido_paterno=$request->get('ApellidoP');
-		// $alumno->apellido_materno=$request->get('ApellidoM');
-		// $alumno->correo=$request->get('Correo');
-		// $alumno->telefono=$request->get('Telefono');
-		// $alumno->corte="uno";
-		// $alumno->director=$request->get('Director');
-		// $alumno->codirector=$request->get('Codirector');
-		// $alumno->campus=$request->get('Campus');
-		// $alumno->carrera=$request->get('Carrera');
-		// $alumno->LGAC=$request->get('LGAC');
-		// $alumno->grado=$request->get('Grado');
-		// $alumno->corte=$request->get('Corte');
-		// $alumno->estatus=$request->get('estatus');
-		// $alumno->fecha_ingreso=$request->get('FechaIn');
-		// $alumno->SAGCC=$request->get('SAGCC');
-		// $alumno->save();
-
-
 		return Redirect::to('usuarios/alumno');
 	}
 	public function show($id){
@@ -113,6 +90,12 @@ class AlumnoController extends Controller
 	public function edit($id){
 		 $Alumno = Alum::findOrFail($id);
 		 return view("usuarios.alumno.edit",["Alumno"=>$Alumno]);
+		 //["Alumno"=>$Alumno,"search"=>$query]);
+	}
+
+	public function editP($id){
+		 $Alumno = Alum::findOrFail($id);
+		 return view("usuarios.alumno.editPos",["Alumno"=>$Alumno]);
 		 //["Alumno"=>$Alumno,"search"=>$query]);
 	}
 
@@ -133,6 +116,8 @@ class AlumnoController extends Controller
         $Alumno->apellido_materno=$request->get('apellido_materno');
 		$Alumno->CVU=$request->get('CVU');
 		$Alumno->correo=$request->get('correo');
+		// $Alumno->imagenes=$request->file('im')->storeAs('public',$Alumno->correo); 
+		// $Alumno->imagenes=$Alumno->correo;
 		// $Alumno->corte=$request->get('Corte');
         $Alumno->update();
         // return Redirect::to('usuarios/alumno');

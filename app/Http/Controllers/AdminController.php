@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use App\Alum;
+use Yajra\DataTables\Facades\DataTables;
+use App\Http\Requests\AlumnoRequest;
 
 class AdminController extends Controller
 {
@@ -24,6 +27,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return Redirect::to('usuarios/alumno');
+         $Alumno = Alum::all();
+        // return $Alumno;
+         return view('usuarios.alumno.admelec',["Alumno"=>$Alumno]);
+        // return view('usuarios.alumno.admelec');
     }
 }

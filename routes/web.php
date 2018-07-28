@@ -22,6 +22,7 @@ Route::prefix('usuarios')->group(function() {
 	Route::get('create','AlumnoController@create');
 	Route::post('create','AlumnoController@store')->name('create');
 	Route::get('alumno/{id}/edit','AlumnoController@edit');
+	Route::get('alumno/{id}/editP','AlumnoController@editP');
 	Route::get('alumno/{id}/mas','AlumnoController@show');
 	Route::patch('alumno/edit/{id}','AlumnoController@update')->name('upedit');
 });
@@ -34,6 +35,5 @@ Route::prefix('admin')->group(function() {
 	Route::get('/', 'AdminController@index')->name('admin.dashboard');
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-  
   });
 
