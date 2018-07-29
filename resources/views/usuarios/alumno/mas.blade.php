@@ -7,7 +7,7 @@
 
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            <h3>Alumno: {{ $Alumno->nombre}}</h3><br>
+            <h3><b>Alumno:</b> {{ $Alumno->nombre}}</h3>
             @if (count($errors)>0)
             <div class="alert alert-danger">
                 <ul>
@@ -17,29 +17,7 @@
                 </ul>
             </div>
             @endif
-   <?php
-$datetime1 = new DateTime();
-$datetime2 = new DateTime($Alumno->fecha_ingreso);
-$interval = $datetime2->diff($datetime1);
-$tiempo = $interval->format('%y años,%m mes');
-$hola=$interval->format('%y años,%m mes');
-if($hola <= '2'){
-    $hola='primer';
-}
-
-elseif($hola >'2' and $hola <='2.5'){
-    $hola='segundo';
-}
-
-else{
-    $hola='tercero';
-}
-
-   
-
- //echo"<input type='text' name='titulo' class ='titulo'  value=".$interval->format('%R%a días').">"; 
-?>
-         
+            
 
     <section id="alumn">
       <thead>
@@ -49,7 +27,6 @@ else{
             <th class="info">Codirector</th>
             <th class="info">Carrera</th>
             <th class="info">Grado</th>
-            <th class="info">Tiempo</th>
             <th class="info">Corte</th>
             <th class="danger">Estatus</th>
             <th class="success">LGAC</th>
@@ -63,11 +40,10 @@ else{
             <td><img width="100px" src="{{ asset('/storage/'.$Alumno->imagenes) }}"  class="img-thumbnail"></td>
                    
 {{--             <td><img width="100px" src="/storage/larga.png"  class="img-thumbnail"></td>
- --}}       <td>{{$Alumno->codirector}}</td>
+ --}}            <td>{{$Alumno->codirector}}</td>
             <td>{{$Alumno->carrera}}</td>
             <td>{{$Alumno->grado}}</td>
-            <td>{{$tiempo}}</td>
-            <td>{{$hola}}</td>
+            <td>{{$Alumno->corte}}</td>
             <td>{{$Alumno->estatus}}</td>
             <td>{{$Alumno->LGAC}}</td>
             <td>{{$Alumno->SAGCC}}</td>    
@@ -75,10 +51,3 @@ else{
       </table>     
     </section>
 @endsection
-
-<style>
-    h3{
-font-size: 30px;
-text-shadow: 1px 1px 2px #000000;
-}
-</style>

@@ -5,17 +5,18 @@ use Illuminate\Support\Facades\Redirect;
 use App\Alum;
 use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\AlumnoRequest;
-class AdminController extends Controller
+
+class LoginUser extends Controller
 {
-   /**
+    /**
      * Create a new controller instance.
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth:admin');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     /**
      * Show the application dashboard.
      *
@@ -25,15 +26,7 @@ class AdminController extends Controller
     {
          $Alumno = Alum::all();
         // return $Alumno;
-         return view('usuarios.alumno.admelec',["Alumno"=>$Alumno]);
+         return view('usuarios.alumno.admelecU',["Alumno"=>$Alumno]);
         // return view('usuarios.alumno.admelec');
     }
-
-    //  public function ui()
-    // {
-    //      $Alumno = Alum::all();
-    //     // return $Alumno;
-    //      return view('usuarios.alumno.admelecU',["Alumno"=>$Alumno]);
-    //     // return view('usuarios.alumno.admelec');
-    // }
 }

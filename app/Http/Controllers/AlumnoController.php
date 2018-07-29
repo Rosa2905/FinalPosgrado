@@ -6,18 +6,12 @@ use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\AlumnoRequest;
 use Alert;
-
 use DB;
-
-
-
 class AlumnoController extends Controller
 {
     
 	public function __construct(){
 	}
-
-
 	// public function index(AlumnoRequest $request){
 	// 	// if($request){
 	// 	// 	$query=trim($request->get('search'));			
@@ -31,27 +25,19 @@ class AlumnoController extends Controller
 	// 	// }
 		
 	// }
-
-
 	public function index(){
 		 //$Alumno = Alum::all();
 		// return $Alumno;
 		 //return view('usuarios.alumno.index',["Alumno"=>$Alumno]);
 		return view('usuarios.alumno.index');
 	}
-
 	public function all(){
 		return Datatables::eloquent(Alum::query())->make(true);
 	}
-
 	public function create(){
 		return view('usuarios.alumno.create');
 	}
-
-
-
 	public function store(AlumnoRequest $request){
-
 		$alumno= new Alum;	 
 		$alumno->matricula=$request->get('Matricula');
 		$alumno->CVU=$request->get('CVU');
@@ -86,26 +72,21 @@ class AlumnoController extends Controller
 		// return view("usuarios.alumno.mas",["Alumno"=>Alum::findOrFail($Matricula)]);
 		return view("usuarios.alumno.mas",["Alumno"=>$Alumno]);
 	}
-
 	public function edit($id){
 		 $Alumno = Alum::findOrFail($id);
 		 return view("usuarios.alumno.edit",["Alumno"=>$Alumno]);
 		 //["Alumno"=>$Alumno,"search"=>$query]);
 	}
-
 	public function editP($id){
 		 $Alumno = Alum::findOrFail($id);
 		 return view("usuarios.alumno.editPos",["Alumno"=>$Alumno]);
 		 //["Alumno"=>$Alumno,"search"=>$query]);
 	}
-
 	// public function mas($Matricula){
 	// 	//return view("usuarios.alumno.edit");
 	// 	 return view("usuarios.alumno.mas",["Alumno"=>Alum::findOrFail($Matricula)]);
 	// 	 //["Alumno"=>$Alumno,"search"=>$query]);
 	// }
-
-
 	public function update(AlumnoRequest $request,$id)
     {
         $Alumno=Alum::findOrFail($id);
@@ -116,6 +97,8 @@ class AlumnoController extends Controller
         $Alumno->apellido_materno=$request->get('apellido_materno');
 		$Alumno->CVU=$request->get('CVU');
 		$Alumno->correo=$request->get('correo');
+		$Alumno->imagenes=$request->file('imagen')->storeAs('public',$Alumno->correo);   
+		$Alumno->imagenes=$Alumno->correo;
 		// $Alumno->imagenes=$request->file('im')->storeAs('public',$Alumno->correo); 
 		// $Alumno->imagenes=$Alumno->correo;
 		// $Alumno->corte=$request->get('Corte');
@@ -125,10 +108,6 @@ class AlumnoController extends Controller
         
       
     }
-
 	public function destroy($id){
-
 	}
-
-
 }

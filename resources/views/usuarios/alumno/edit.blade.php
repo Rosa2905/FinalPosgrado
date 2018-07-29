@@ -18,13 +18,15 @@
                 </ul>
             </div>
             @endif
-        {!!Form::model($Alumno,['method'=>'PATCH','route'=>['upedit',$Alumno->id]])!!}
-
+        {!!Form::model($Alumno,['method'=>'PATCH','route'=>['upedit',$Alumno->id],'enctype'=>"multipart/form-data"])!!}
+{{--         {!!Form::open(['route'=>['create'],'method'=>'POST','autocomplete'=>'off','enctype'=>"multipart/form-data"])!!}
+ --}}
             {{Form::token()}}
         
              <div class="form-group" id="foto">
-                <img width="100px" src="{{ asset('/storage/'.$Alumno->imagenes) }}"  alt="{{ $Alumno->nombre}}" class="img-thumbnail">
+                <img width="100px" name="iman" src="{{ asset('/storage/'.$Alumno->imagenes) }}"  alt="{{ $Alumno->nombre}}" class="img-thumbnail">
                 <input  type="file" name="imagen"  class="subir" id="subir">
+                
             </div>
 
             <div class="form-group" id="nombre">
@@ -74,51 +76,40 @@
 
 
 <style>
-
 h3 {
     position: absolute;
     left: 40px;
     font-style: normal;
     
 }
-
 #foto{
     position: relative;
     top: 100px;
     left: 100px;
 }
-
 #nombre{
     width: 22%;
     position: relative;
     top: -85px;
     left: 400px;  
 }
-
-
-
 #matricula{
     width: 22%;
     position: relative;
     top: -350px;
     left: 600px;
 }
-
-
-
 #correo {
     width: 40%;
     position: relative;
     top: -525px;
     left: 800px;
-
 }
 #botones{
     position: relative;
     top: 50px;
     left: -200px;
 }
-
 #subir{
     width: 40%;
     position: relative;
@@ -130,5 +121,3 @@ font-size: 30px;
 text-shadow: 1px 1px 2px #000000;
 }
 </style>
-
-

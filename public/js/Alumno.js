@@ -1,4 +1,4 @@
- $(document).ready( function () {
+$(document).ready( function () {
     var table = $('#Alumnotabla').DataTable({
          "processing": true,
          "serverSide": true,
@@ -41,8 +41,6 @@
              $("#datos_posgrado").click(function(){
                     location.href='alumno/'+data.id+'/editP'   
               });
-
-
             // console.log(data.id);
             
         });
@@ -54,4 +52,3 @@ var show = function(tbody,table){
               location.href='alumno/'+data.id+'/mas'
         });
  }
- 

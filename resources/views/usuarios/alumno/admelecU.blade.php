@@ -10,10 +10,9 @@
   <div class="ex3">
     <img id="containerEx3" width="12%" onclick="location.href='{{URL::action('AlumnoController@index')}}'" src="{{ asset('imagen/graduates.png') }}" alt="Cinque Terre" >
     <img id="alumno" width="12%"  src="{{ asset('imagen/presentation.png') }}" alt="Alumnos" >
-    <img  id="asignar" width="12%" onclick="location.href='{{URL::action('AlumnoController@index')}}'" src="{{ asset('imagen/asignar.png') }}" alt="Alumnos" >
   <label id="laDo" class="text-danger" > Alumnos  </label>
   <label id="laEs" class="text-danger" > Docentes   </label>
-  <label id="laAs" class="text-danger" > Asignar </label>
+  
   </div>
 
 @endsection

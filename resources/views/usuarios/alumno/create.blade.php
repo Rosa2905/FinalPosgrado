@@ -1,14 +1,14 @@
 @extends('layouts.alumno')
 @section('content')
-	<link href="{{ asset('sweetalert/sweetalert.css') }}" rel="stylesheet">
-    <script src="{{ asset('sweetalert/sweetalert.min.js') }}"></script>
+
 <div class="topnav" >
   <a class="active" href="{{URL::action('AlumnoController@index')}}"><span class="  glyphicon glyphicon-circle-arrow-left "></span> Regresar</a>
   {{-- <h3><center>Agregar Alumno</center></h3> --}}
 {{--   <a href="#" ><img class="rightedit"   width="20%" src="{{ asset('imagen/esta.png') }}"></a>
  --}}
  </div>
- 	<div class="row">
+
+	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 			
 			@if(count($errors)>0)
@@ -97,8 +97,8 @@
 {{-- 	Image::make(input::file('photo')->resize(300,200)->save(foo.jpg)) --}}
 
 	<div class="form-group">
-		<button id="guardar" class="btn btn-primary" type="submit">Guardar</button>
-		<button class="btn btn-danger" type="reset" >Cancelar</button>
+		<button class="btn btn-primary" type="submit">Guardar</button>
+		<button class="btn btn-danger" type="reset">Cancelar</button>
 		{{-- <input type="submit" value="AGREGAR" class="boton">	 --}}
 	</div>
 			{!!Form::close()!!}
@@ -107,16 +107,7 @@
 
 		</div>
 	</div>
-	 	@endsection 
-
-
-{{-- <script >
-	$("#guardar").click(function(){
-                    swal("Are you sure you want to do this?", {
-  buttons: ["Oh noez!", "Aww yiss!"],
-}); 
-              });
-</script> --}}  
+	 	@endsection   
 
 
 <script type="text/javascript">
@@ -126,9 +117,8 @@ function sumarDias(fecha, dias){
    // el mes es devuelto entre 0 y 11
    month=fecha.getMonth()+1;
    year=fecha.getFullYear();
-   miVariable=day+"-"+month+"-"+year;
-   //swal("-- Fecha de egreso ideal --", day+" / "+month+" / "+year);
-   swal("-- Fecha de egreso ideal --", day+" /"+month+" /"+year, "info");
+   miVariable=year+"-"+month+"-"+day;
+   alert("\n-- FECHA DE EGRESO IDEAL -- \n\n"+year+"/"+month+"/"+day);
    document.getElementById("fechaideal").innerHTML = miVariable;
 }
 	function bus(){
