@@ -5,6 +5,7 @@ use App\Alum;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\AlumnoRequest;
+use Barryvdh\DomPDF\Facade as PDF;
 use Alert;
 use DB;
 class AlumnoController extends Controller
@@ -72,6 +73,21 @@ class AlumnoController extends Controller
 		// return view("usuarios.alumno.mas",["Alumno"=>Alum::findOrFail($Matricula)]);
 		return view("usuarios.alumno.mas",["Alumno"=>$Alumno]);
 	}
+
+
+	public function reporte($id,$num){
+		$Alumno = Alum::findOrFail($id);
+		if($num==1){
+		$pdf = PDF::loadView("usuarios.alumno.reporte",["Alumno"=>$Alumno]);
+        return $pdf->download('listado.pdf');
+   		 }
+    else
+    	return 'hola';
+
+    	
+	}
+
+
 	public function edit($id){
 		 $Alumno = Alum::findOrFail($id);
 		 return view("usuarios.alumno.edit",["Alumno"=>$Alumno]);

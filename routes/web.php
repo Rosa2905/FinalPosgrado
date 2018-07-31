@@ -28,6 +28,7 @@ Route::prefix('usuarios')->group(function() {
 });
 
 Route::get('usuarios/alumno/all', 'AlumnoController@all');
+Route::get('usuarios/alumno/{id}/{num}/reporte', 'AlumnoController@reporte');
 Auth::routes();
 // Route::get('/home', 'HomeController@index');
 // Route::get('usuarios/admelecU', 'AdminController@ui')->name('users.dashboard');

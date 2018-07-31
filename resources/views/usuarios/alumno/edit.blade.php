@@ -24,7 +24,7 @@
             {{Form::token()}}
         
              <div class="form-group" id="foto">
-                <img width="100px" name="iman" src="{{ asset('/storage/'.$Alumno->imagenes) }}"  alt="{{ $Alumno->nombre}}" class="img-thumbnail">
+                <img width="200px" name="iman" src="{{ asset('/storage/'.$Alumno->imagenes) }}"  alt="{{ $Alumno->nombre}}" class="img-thumbnail">
                 <input  type="file" name="imagen"  class="subir" id="subir">
                 
             </div>

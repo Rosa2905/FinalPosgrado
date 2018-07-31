@@ -1,6 +1,7 @@
 @extends('layouts.alumno')
 @section('content')
-
+  <link href="{{ asset('sweetalert/sweetalert.css') }}" rel="stylesheet">
+    <script src="{{ asset('sweetalert/sweetalert.min.js') }}"></script>
 
 <div class="topnav" >
   <a class="active" href="{{URL::action('AlumnoController@index')}}"><span class="  glyphicon glyphicon-circle-arrow-left "></span> Regresar</a>
@@ -118,10 +119,8 @@
   position: relative;
   left: 520px;
   top:-715px;
-
 }
 #lgac{
-
    font-family: "ABeeZee", ABeeZee-italic;
   text-shadow: 3px 1.2px 2px white;
   background:#c5e1a5;
@@ -135,7 +134,6 @@
   font-weight:bold;
   height: 30px
 }
-
   </style>  
 
 
@@ -147,7 +145,10 @@ function sumarDias(fecha, dias){
    month=fecha.getMonth()+1;
    year=fecha.getFullYear();
    miVariable=year+"-"+month+"-"+day;
-   alert("\n-- FECHA DE EGRESO IDEAL -- \n\n"+year+"/"+month+"/"+day);
+   // swal("\n-- FECHA DE EGRESO IDEAL -- \n\n"+year+"/"+month+"/"+day);
+   // document.getElementById("fechaideal").innerHTML = miVariable;
+
+    swal("-- Fecha de egreso ideal --", day+" /"+month+" /"+year, "info");
    document.getElementById("fechaideal").innerHTML = miVariable;
 }
   function bus(){
@@ -157,4 +158,3 @@ function sumarDias(fecha, dias){
   document.cookie ='variable='+original+'; expires=Thu, 2 Aug 2030 20:47:11 UTC; path=/';
 }
 </script>
-
