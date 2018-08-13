@@ -22,12 +22,12 @@
 {{--         {!!Form::open(['route'=>['create'],'method'=>'POST','autocomplete'=>'off','enctype'=>"multipart/form-data"])!!}
  --}}
             {{Form::token()}}
-        
+        {{-- 
              <div class="form-group" id="foto">
                 <img width="200px" name="iman" src="{{ asset('/storage/'.$Alumno->imagenes) }}"  alt="{{ $Alumno->nombre}}" class="img-thumbnail">
                 <input  type="file" name="imagen"  class="subir" id="subir">
                 
-            </div>
+            </div> --}}
 
             <div class="form-group" id="nombre">
                 <label for="Nombre">Nombre</label>
@@ -82,33 +82,33 @@ h3 {
     font-style: normal;
     
 }
-#foto{
+/*#foto{
     position: relative;
     top: 100px;
     left: 100px;
-}
+}*/
 #nombre{
     width: 22%;
     position: relative;
-    top: -85px;
-    left: 400px;  
+    top: 95px;
+    left: 100px;  
 }
 #matricula{
     width: 22%;
     position: relative;
-    top: -350px;
-    left: 600px;
+    top: -165px;
+    left: 400px;
 }
 #correo {
     width: 40%;
     position: relative;
-    top: -525px;
-    left: 800px;
+    top: -340px;
+    left: 670px;
 }
 #botones{
     position: relative;
-    top: 50px;
-    left: -200px;
+    top: 30px;
+    left: -260px;
 }
 #subir{
     width: 40%;

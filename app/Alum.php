@@ -14,20 +14,24 @@ class Alum extends Model
         'apellido_materno',
         'correo',
         'CVU',
+        'Beca',
         'matricula',
         'telefono',
         'corte',
         'director',
         'cordirector',
-        'campus',
-        'carrera',
         'LGAC',
         'grado',
         'fecha_ingreso',
         'fecha_egreso',
         'fecha_ideal',
+        'fecha_titulacion',
         'estatus',
         'SAGCC',
         'estatus',
-        'foto'];
+        'Modalidad',
+        'Conocimiento'];
+        // 'foto'];
+
+    
 }

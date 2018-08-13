@@ -15,6 +15,15 @@
   <label id="laEs" class="text-danger" > Docentes   </label>
   <label id="laAs" class="text-danger" > Asignar </label>
   </div>
+  <br><br><input type="button" onclick="location.href='{{URL::action('AdminController@indicador',$num=0)}}'" class="btn 
+        btn-success"  value="Maestria"></><span  class="glyphicon glyphicon-user"></span>
+
+  <br><br><input type="button" onclick="location.href='{{URL::action('AdminController@indicador',$num=2)}}'" class="btn 
+        btn-success"  value="Doctorado"></><span  class="glyphicon glyphicon-user"></span>
+
+  <br><br><input type="button" onclick="location.href='{{URL::action('AdminController@indicador',$num=3)}}'" class="btn 
+        btn-success"  value="Archivo de Correos"></><span  class="glyphicon glyphicon-user"></span>
+
 
 @endsection
 

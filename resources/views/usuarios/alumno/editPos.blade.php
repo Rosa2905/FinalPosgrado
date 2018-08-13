@@ -4,7 +4,7 @@
     <script src="{{ asset('sweetalert/sweetalert.min.js') }}"></script>
 
 <div class="topnav" >
-  <a class="active" href="{{URL::action('AlumnoController@index')}}"><span class="  glyphicon glyphicon-circle-arrow-left "></span> Regresar</a>
+  <a class="active" href="{{URL::action('AdminController@index')}}"><span class="  glyphicon glyphicon-circle-arrow-left "></span> Regresar</a>
   {{-- <h3><center>Agregar Alumno</center></h3> --}}
 {{--   <a href="#" ><img class="rightedit"   width="20%" src="{{ asset('imagen/esta.png') }}"></a>
  --}}
@@ -53,6 +53,11 @@
       <input  type="text" REQUIRED name="dirtesis"   placeholder="{{$Alumno->director}}">
       <br><input type="text" REQUIRED name="cotesis" placeholder="{{$Alumno->codirector}}">
       <br><input type="text" REQUIRED name="SAGCC"  placeholder="{{$Alumno->SAGCC}}">
+
+      <div>
+        <button class="btn btn-success" type="submit">Guardar</button>
+        <button class="btn btn-danger" type="reset">Cancelar</button>
+      </div> 
   </div>
 
   <div >
@@ -68,14 +73,17 @@
     </select>
     <div class="segundo">
       <br><br><b><label > .Fecha ingreso </b></br><input name="cmbEleccion"  id="cmbEleccion" type="date" onchange="return bus();"></label>
-      <br><label > .Fecha estimada egreso </label></b></br>
+      <br><label > .Fecha egreso </label></b></br>
       <label id="fechaideal" REQUIRED name='fechaideal' class="ideal">.            ------------------</label></b>
-      </br></br><label > .Fecha egreso </b></br><input type="date" name="feegre" ></label></br>
-    </div><br>
-    <div  class="segundo">
-      <button class="btn btn-success" type="submit">Guardar</button>
-      <button class="btn btn-danger" type="reset">Cancelar</button>
-    </div> 
+      </br></br><label > .Fecha Titulacion </b></br><input type="date" name="feegre" ></label></br>
+      <br><select   REQUIRED name="estatus"  id="lgac">
+        <option value='Vigente' selected >- Vigente -</b></option>
+        <option value='Bajo'>Baja</option>
+        <option value='Tesista'>Tesista</option>
+        <option value='Tesista'>Egresado</option>
+    </select>
+    
+
   </div>
 <div class="tercero">
   <label>Fechas Anteriores </label><br><br>
@@ -113,13 +121,28 @@
 .segundo{
   position: relative;
   left: 290px;
-  top:-400px;
+  top:-425px;
 }
 .tercero{
   position: relative;
-  left: 520px;
-  top:-715px;
+  left: 540px;
+  top:-735px;
 }
+#lgac{
+   font-family: "ABeeZee", ABeeZee-italic;
+  text-shadow: 3px 1.2px 2px white;
+  background:#c5e1a5;
+  color: #000000;
+  font-size: 1.4em;
+  border-color:black;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 2.2px solid #81c784;
+  font-weight:bold;
+  height: 30px
+}
+
 #lgac{
    font-family: "ABeeZee", ABeeZee-italic;
   text-shadow: 3px 1.2px 2px white;

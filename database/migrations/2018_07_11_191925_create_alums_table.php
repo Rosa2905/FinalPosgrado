@@ -21,20 +21,23 @@ class CreateAlumsTable extends Migration
             $table->string('correo')->unique();
             $table->integer('matricula');
             $table->string('CVU');
+            $table->string('Beca');
             $table->string('telefono');
             $table->string('corte');
             $table->string('director');
             $table->string('codirector');
-            $table->string('campus');
-            $table->string('carrera');
             $table->string('LGAC');
             $table->enum('grado', ['MI','MC','DI','DC']);
             $table->date('fecha_ingreso');
             $table->date('fecha_egreso');
             $table->date('fecha_ideal');
-            $table->enum('estatus', ['Vigente', 'Bajo','Tesista']);
+            $table->date('fecha_titulacion');
+            $table->enum('estatus', ['Vigente', 'Baja','Tesista','Extemporaneo']);
             $table->string('SAGCC');
-            $table->binary('foto');
+            $table->enum('Modalidad', ['R.P','Beca Conacyt']);
+            $table->enum('Conocimiento', ['Candidato','Nivel1']);
+
+            // $table->binary('foto');
             // $table->boolean('verified')->default('false');
             $table->timestamps();
             

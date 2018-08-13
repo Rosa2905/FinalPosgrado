@@ -26,6 +26,11 @@ class AlumnoController extends Controller
 	// 	// }
 		
 	// }
+
+
+	 // $mira = DB::Table('alums')->where('id', 1)->first();
+			 
+		// 	 return view("usuarios.alumno.mas", ["Alumno"=>$mira]);
 	public function index(){
 		 //$Alumno = Alum::all();
 		// return $Alumno;
@@ -36,7 +41,7 @@ class AlumnoController extends Controller
 		return Datatables::eloquent(Alum::query())->make(true);
 	}
 	public function create(){
-		return view('usuarios.alumno.create');
+	 return view('usuarios.alumno.create');
 	}
 	public function store(AlumnoRequest $request){
 		$alumno= new Alum;	 
@@ -50,25 +55,26 @@ class AlumnoController extends Controller
 		$alumno->corte="uno";
 		$alumno->director="uno";
 		$alumno->codirector="uno";
-		$alumno->campus="uno";
-		$alumno->carrera="uno";
-		$alumno->LGAC="uno";
-		$alumno->grado="MI";
+		$alumno->LGAC=$request->get('LGAC');
+		$alumno->SAGCC="uno";
+		$alumno->grado=$request->get('grado');
 		$alumno->corte="uno";
 		$alumno->estatus="Vigente";
-		$alumno->fecha_ingreso="2018-07-19";
+		$alumno->fecha_ingreso=$request->get('cmbEleccion');
 		$alumno->fecha_egreso="2018-07-19";
 		$alumno->fecha_ideal="2018-07-19";
-		$alumno->foto="201";
-		$alumno->imagenes=$request->file('imagen')->storeAs('public',$alumno->correo);   
+		$alumno->fecha_titulacion="2018-07-19";
+		// $alumno->imagenes=$request->file('imagen')->storeAs('public',$alumno->correo);   
 		// Image::make(input::file('foto')->resize(300,200)->save(foo.jpg));
-		$alumno->SAGCC="uno";
+		$alumno->Beca=$request->get('Beca');
+		$alumno->Modalidad=$request->get('pago');
+		$alumno->Conocimiento=$request->get('reconocimiento');
 		// $alumno->verified="false";
-		$alumno->imagenes=$alumno->correo;
+		// $alumno->imagenes=$alumno->correo;
 		$alumno->save();
 		return Redirect::to('usuarios/alumno');
 	}
-	public function show($id){
+		public function show($id){
 		$Alumno = Alum::findOrFail($id);
 		// return view("usuarios.alumno.mas",["Alumno"=>Alum::findOrFail($Matricula)]);
 		return view("usuarios.alumno.mas",["Alumno"=>$Alumno]);
@@ -81,8 +87,10 @@ class AlumnoController extends Controller
 		$pdf = PDF::loadView("usuarios.alumno.reporte",["Alumno"=>$Alumno]);
         return $pdf->download('listado.pdf');
    		 }
-    else
-    	return 'hola';
+    elseif($num==2){
+    	$pdf = PDF::loadView("usuarios.alumno.reporte1",["Alumno"=>$Alumno]);
+        return $pdf->download('listado.pdf');
+    }
 
     	
 	}
@@ -113,8 +121,8 @@ class AlumnoController extends Controller
         $Alumno->apellido_materno=$request->get('apellido_materno');
 		$Alumno->CVU=$request->get('CVU');
 		$Alumno->correo=$request->get('correo');
-		$Alumno->imagenes=$request->file('imagen')->storeAs('public',$Alumno->correo);   
-		$Alumno->imagenes=$Alumno->correo;
+		// $Alumno->imagenes=$request->file('imagen')->storeAs('public',$Alumno->correo);   
+		// $Alumno->imagenes=$Alumno->correo;
 		// $Alumno->imagenes=$request->file('im')->storeAs('public',$Alumno->correo); 
 		// $Alumno->imagenes=$Alumno->correo;
 		// $Alumno->corte=$request->get('Corte');

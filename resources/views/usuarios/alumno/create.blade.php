@@ -29,73 +29,82 @@
 
 	{{-- <form accept-charset="utf-8" class="form" method="POST" action="php/Alum.php"  enctype="multipart/form-data" > --}}
 		<dir><dir></br></br>
-		<form action="../../form-result.php"  method="POST" >
-			<select id="Academica" REQUIRED name ="Academica" class="eleccion" onchange="return academia();">
-				<option value='no' selected class="eleccion">- Unidad Academica-</b></option>
-				<option value='FCQI'>FCQI</option>
-				<option value='Tecate'>Tecate</option>
-				<option value='Valle Palmas'>Valle Palmas</option>
-			</select>
-
+		
+	
+<form action="../../form-result.php"  method="POST" >
 			  <br><br><input type="number" REQUIRED name="Matricula" placeholder="Matricula">
 			  <br><input type="text" REQUIRED name="Nombre" placeholder="Nombre..">
 			  <br><input type="text" REQUIRED name="ApellidoP" placeholder="A.Paterno" >
 			  <br><input type="text" REQUIRED name="ApellidoM" placeholder="A. Materno">
 			  <br><input type="text" REQUIRED name="CVU" placeholder="CVU.." >
+			  <br><input type="text" REQUIRED name="Beca" placeholder="#Beca.." >
 			  <br><input type="number"  REQUIRED name="Telefono" placeholder="Telefono..">
 			  <br><input type="email" REQUIRED name="Correo" placeholder="Email..">  
 		</form>
 
 
-		<form action="../../form-result.php" class="eleccion1"  method="POST">
+		
 			 <p></p> 
-			 <select id="campoconocimiento" REQUIRED name="campoconocimiento" class="eleccion" onchange="return campos();">
+			 <select name ="cono" id="campoconocimiento" REQUIRED name="campoconocimiento" class="eleccion1" onchange="return campos();">
 				<option value='no' selected >- Campo Conocimiento -</b></option>
-				<option value='quimica'>Quimica</option>
-				<option value='medio'>Medio Ambiente</option>
+				<option value='Quimica'>Quimica</option>
+				<option value='Medio Ambiente'>Medio Ambiente</option>
 				<option value='Industrial'>Industrial</option>
 				<option value='Electrica'>Electrica</option>
 				<option value='Computacion'>Computacion</option>
 			</select></br></br></br>
+
+			<select   REQUIRED  name="pago" class="eleccion1" onchange="return lgac();">
+				<option value='R.P' selected >Modalidad Pago</b></option>
+				<option value='Beca Conacyt'>Beca Conacyt</option>
+				<option value='R.P'>Recursos Propios</option>
+			</select><br><br><br>
 	
-			<select id="grado"  REQUIRED name="grado" class="eleccion" onchange="return grad();">
+			<select  REQUIRED name="grado" class="eleccion1" onchange="return grad();">
 				<option value='no' selected  >-Grado-</b></option>
 				<option value='MI'>MI</option>
 				<option value='MC'>MC</option>
 				<option value='DI'>DI</option>
 				<option value='DC'>DC</option>
+			</select><br><br><br>
+
+			<select   REQUIRED name="reconocimiento" class="eleccion1" onchange="return lgac();">
+				<option value='Candidato' selected >Conocimiento S.N.I</b></option>
+				<option value='Candidato'>Candidato</option>
+				<option value='Nivel1'> Nivel1</option>
 			</select>
-		</form>
-	<form action="../../form-result.php" class="eleccion2"  method="POST">
-		<select  id="LGAC" REQUIRED name="LGAC" class="eleccion" onchange="return lgac();">
+
+
+
+		<br><input  type="text" REQUIRED name="dirtesis"  placeholder="Dir. Tesis" class="dir"><br>
+		<input type="text" REQUIRED name="cotesis" placeholder="Co.Tesis" class="dir"><br>
+		<input type="text" REQUIRED name="SAGCC"  placeholder="SAGCC" class="dir"><br><br> 
+		
+	
+		<select   REQUIRED name="LGAC" class="eleccion2" onchange="return lgac();">
 			<option value='no' selected >- LGAC Asociada -</b></option>
-			<option value='bioquimica'>Bioquimica</option>
-			<option value='corrymate'>Corrocion y Materiales</option>
-			<option value='conam'>Contaminacion Ambiental</option>
-			<option value='softysimua'>Ing.Software y simulacion social </option>
-			<option value='commovil'>Computo movil y oblicuo</option>
-			<option value='elecyelec'>Sistemas electricos y electronicos</option>
-			<option value='manu'>Manufactura produccion y calidad</option>
+			<option value='Bioquimica'>Bioquimica</option>
+			<option value='Corrocion y Materiales'>Corrocion y Materiales</option>
+			<option value='Contaminacion Ambiental'>Contaminacion Amb.</option>
+			<option value='Ing.Software y simulacion social'>Ing.Soft y simulacion social </option>
+			<option value='Computo movil y oblicuo'>Computo movil y oblicuo</option>
+			<option value='Sistemas electricos y electronicos'>Sistemas electri y electro</option>
+			<option value='Manufactura produccion y calidad'>Manufac produccion y calidad</option>
 		</select>
-	</form>
+	
 
-	<form class="dir">	
-		<input  type="text" REQUIRED name="dirtesis"  placeholder="Dir. Tesis" >
-		<br><input type="text" REQUIRED name="cotesis" placeholder="Co.Tesis">
-		<br><input type="text" REQUIRED name="SAGCC"  placeholder="SAGCC">
-	</form>
 
-	<form class="lafein">
-		</br></br></br><b><label> .Fecha ingreso </b></br><input name="cmbEleccion" id="cmbEleccion" type="date" onchange="return bus();"></label>
-		<br><label > .Fecha ideal egreso </label></b></br>
-		<b><label id="fechaideal" REQUIRED name='fechaideal' class="ideal">.            ------------------</label></b>
-		</br></br><b><label > .Fecha egreso </b></br><input type="date" name="feegre" ></label></br></br>
-	</form>
+
+		</br></br></br><b><label class="lafein"> .Fecha ingreso </b></br><input name="cmbEleccion" id="cmbEleccion" type="date" class="lafein" onchange="return bus();"></label>
+		<br><label class="lafein"> .Fecha de egreso </label></b></br>
+		<b><label id="fechaideal" REQUIRED name='fechaideal' class="lafein">.            ------------------</label></b>
+		</br></br><b><label class="lafein"> .Fecha limite titulacion </b></br><input type="date" name="feegre" class="lafein"></label></br></br>
+	
 
 	<a href="#" ><img class="imagen"   width=80%" src="{{ asset('imagen/esta.png') }}"></a>
-	<input  type="file" name="imagen"  class="subir">
+	{{-- <input  type="file" name="imagen"  class="subir"> --}}
 {{-- 	Image::make(input::file('photo')->resize(300,200)->save(foo.jpg)) --}}
-	<div class="form-group">
+	<div class="boton">
 		<button id="guardar" class="btn btn-primary" type="submit">Guardar</button>
 		<button class="btn btn-danger" type="reset" >Cancelar</button>
 		{{-- <input type="submit" value="AGREGAR" class="boton">	 --}}

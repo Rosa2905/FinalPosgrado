@@ -1,7 +1,7 @@
 @extends('layouts.alumno')
 @section('content')
    <div class="topnav" >
-  <a class="active" href="#home"><span class=" glyphicon glyphicon-home "></span> Inicio</a>
+  <a class="active" href="{{URL::action('AdminController@index')}}"><span class=" glyphicon glyphicon-home "></span> Inicio</a>
   <a href="#about">Consultar</a>
   <a href="#contact">Mas</a>
   <a href="#" ><img class="right"   width="20%" src="{{ asset('imagen/esta.png') }}"></a>
@@ -9,21 +9,23 @@
 
 </div>
  {{--  <input type="text"  name="search" id="search" placeholder="Buscar.."> --}}
-  <span id="se" class="glyphicon glyphicon-search"></span>
-
+  <input id="agreg" type="button" onclick="location.href='{{URL::action('AlumnoController@create')}}'" class="btn 
+        btn-success"  value="Agregar"></><span  class="glyphicon glyphicon-user"></span>
   <table id="Alumnotabla" class="table table-striped table-bordered">
      <thead>
           <tr>
-             <th>Unidad</th>
             <th class="info">Nombre</th>
+            <th class="info">Apellido P.</th>
             <th class="info">Matricula</th>
             <th class="info">CVU</th>
-            <th class="info">Tel</th>
-            <th class="info">Correo</th>
+            <th class="info">#Beca</th>
+            <th class="info">Estatus</th>
+            <th  class="info">SACC</th>
+            <th  class="info" width="0%">LGAC</th>
             <th>Grado</th>
-            <th>Dir.Tesis</th>
+            <th >Dir.Tesis</th>
             <th>Ingreso</th>
-            <th>Fijada</th>
+            <th>Egreso Fijado</th>
            <th class="info">ACCION</th>           
           </tr>
         </thead>
@@ -61,3 +63,13 @@
        </tbody>  --}}
       </table> 
 @endsection
+
+
+<style >
+  
+
+
+#Alumnotabla{
+/*font-size: 1.0em;*/
+}
+</style>

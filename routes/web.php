@@ -22,13 +22,18 @@ Route::prefix('usuarios')->group(function() {
 	Route::get('create','AlumnoController@create');
 	Route::post('create','AlumnoController@store')->name('create');
 	Route::get('alumno/{id}/edit','AlumnoController@edit');
-	Route::get('alumno/{id}/editP','AlumnoController@editP');
 	Route::get('alumno/{id}/mas','AlumnoController@show');
+	Route::get('alumno/{id}/editP','AlumnoController@editP');
+	
+	Route::get('alumno/{num}/indDoctorado','AlumnoController@indDoctorado');
+	Route::get('alumno/{num}/indicador','AdminController@indicador');
 	Route::patch('alumno/edit/{id}','AlumnoController@update')->name('upedit');
 });
 
 Route::get('usuarios/alumno/all', 'AlumnoController@all');
 Route::get('usuarios/alumno/{id}/{num}/reporte', 'AlumnoController@reporte');
+//Route::get('usuarios/alumno/{num}/reporte', 'AdminController@reporte');
+
 Auth::routes();
 // Route::get('/home', 'HomeController@index');
 // Route::get('usuarios/admelecU', 'AdminController@ui')->name('users.dashboard');

@@ -4,23 +4,23 @@ $(document).ready( function () {
          "serverSide": true,
          "ajax": "alumno/all",
          "columns":[
-            {"data":'campus'},
             {"data":'nombre'},
+            {"data":'apellido_paterno'},
             {"data":'matricula'},
             {"data":'CVU'},
-            {"data":'telefono'},
-            {"data":'correo'},
+            {"data":'Beca'},
+            {"data":'estatus'},
+            {"data":'SAGCC'},
+            {"data":'LGAC'},
             {"data":'grado'},
             {"data":'director'},
             {"data":'fecha_ingreso'},
             {"data":'fecha_egreso'},
-             {"defaultContent":
+                  {"defaultContent":
                                 `<a id="edit" data-target="#modal-edit" data-toggle="modal" >
                                 <button class="btn btn-success editar">
                                 <span class=" glyphicon glyphicon-pencil"></span> Editar</button></a>
                                 
-                                <button type="button" class="btn btn-success " >
-                                <span class=" glyphicon glyphicon-trash" ></span> Borrar</button>
                                 <button type="button" class="btn btn-success mas" value="Mas">
                                 <span class="glyphicon glyphicon-search" ></span> Mas.</button>`}]}
                                 );
