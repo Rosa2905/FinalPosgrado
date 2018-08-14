@@ -129,9 +129,33 @@ class AlumnoController extends Controller
         $Alumno->update();
         // return Redirect::to('usuarios/alumno');
         return $Alumno->nombre;
-        
-      
     }
+
+    public function updatePos(AlumnoRequest $request,$id)
+    {
+        $Alumno=Alum::findOrFail($id);
+        $Alumno->codirector=$request->get('cotesis');
+        $Alumno->director=$request->get('dirtesis');
+        $Alumno->LGAC=$request->get('LGAC');
+		$Alumno->SAGCC="uno";
+		$Alumno->grado=$request->get('grado');
+		$Alumno->corte="uno";
+		$Alumno->estatus="Vigente";
+		$Alumno->fecha_ingreso=$request->get('cmbEleccion');
+		// $Alumno->fecha_egreso="2018-07-19";
+		// $Alumno->fecha_ideal="2018-07-19";
+		// $Alumno->fecha_titulacion="2018-07-19";
+  //       $Alumno->matricula=$request->get('matricula');
+  //       $Alumno->telefono=$request->get('telefono');
+  //       $Alumno->apellido_paterno=$request->get('apellido_paterno');
+  //       $Alumno->apellido_materno=$request->get('apellido_materno');
+
+        $Alumno->update();
+        // return Redirect::to('usuarios/alumno');
+        return $Alumno->director;
+    }
+
+
 	public function destroy($id){
 	}
 }

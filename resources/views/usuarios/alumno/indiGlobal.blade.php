@@ -1,36 +1,3 @@
- <?php
-         $num;
-          $ETQu;$ET2Qu;$ET3Qu;$ET12;  $ETMA;$ET2MA;$ET3MA; $ETIn;$ET2In;$ET3In;  $ETEl;$ET2El;$ET3El; $ETBi;$ET2Bi;$ET3Bi; $ETCor;$ET2Cor;$ET3Cor; 
-          $ETCA;$ET2CA;$ET3CA;  $ETISS;$ET2ISS;$ET3ISS; $ETCU;$ET2CU;$ET3CU; $ETSEE;$ET2SEE;$ET3SEE; $ETMPA;$ET2MPA;$ET3MPA; $ETCOM;$ET2COM;$ET3COM;
-
-          if($tiPCQu==0 or $egQu ==0)$ETQu=0;else $ETQu=($tiPCQu/$egQu)*100; if($tiSCQu==0 or $egQu ==0)$ET2Qu=0;else $ET2Qu=($tiSCQu/$egQu)*100;if($tiTCQu==0 or $egQu ==0)$ET3Qu=0;else $ET3Qu=($tiTCQu/$egQu)*100;
-
-          if($tiPCMA==0 or $egMA ==0)$ETMA=0;else $ETMA=($tiPCMA/$egMA)*100; if($tiSCMA==0 or $egMA ==0)$ET2MA=0;else $ET2MA=($tiSCMA/$egMA)*100;if($tiTCMA==0 or $egMA ==0)$ET3MA=0;else $ET3MA=($tiTCMA/$egMA)*100;
-
-
-          if($tiPCIn==0 or $egIn ==0)$ETIn=0;else $ETIn=($tiPCIn/$egIn)*100; if($tiSCIn==0 or $egIn ==0)$ET2In=0;else $ET2In=($tiSCIn/$egIn)*100;if($tiTCIn==0 or $egIn ==0)$ET3In=0;else $ET3In=($tiTCIn/$egIn)*100;
-
-
-          if($tiPCEl==0 or $egEl ==0)$ETEl=0;else $ETEl=($tiPCEl/$egEl)*100; if($tiSCEl==0 or $egEl ==0)$ET2El=0;else $ET2El=($tiSCEl/$egEl)*100;if($tiTCEl==0 or $egEl ==0)$ET3El=0;else $ET3El=($tiTCEl/$egEl)*100;
-
-          if($tiPCBi==0 or $egBi ==0)$ETBi=0;else $ETBi=($tiPCBi/$egBi)*100; if($tiSCBi==0 or $egBi ==0)$ET2Bi=0;else $ET2Bi=($tiSCBi/$egBi)*100;if($tiTCBi==0 or $egBi ==0)$ET3Bi=0;else $ET3Bi=($tiTCBi/$egBi)*100;
-
-          if($tiPCCor==0 or $egCor ==0)$ETCor=0;else $ETCor=($tiPCCor/$egCor)*100; if($tiSCCor==0 or $egCor ==0)$ET2Cor=0;else $ET2Cor=($tiSCCor/$egCor)*100;if($tiTCCor==0 or $egCor ==0)$ET3Cor=0;else $ET3Cor=($tiTCCor/$egCor)*100;
-
-          if($tiPCCA==0 or $egCA ==0)$ETCA=0;else $ETCA=($tiPCCA/$egCA)*100; if($tiSCCA==0 or $egCA ==0)$ET2CA=0;else $ET2CA=($tiSCCA/$egCA)*100;if($tiTCCA==0 or $egCA ==0)$ET3CA=0;else $ET3CA=($tiTCCA/$egCA)*100;
-
-          if($tiPCISS==0 or $egISS ==0)$ETISS=0;else $ETISS=($tiPCISS/$egISS)*100; if($tiSCISS==0 or $egISS ==0)$ET2ISS=0;else $ET2ISS=($tiSCISS/$egISS)*100;if($tiTCISS==0 or $egISS ==0)$ET3ISS=0;else $ET3ISS=($tiTCISS/$egISS)*100;
-
-          if($tiPCCU==0 or $egCU ==0)$ETCU=0;else $ETCU=($tiPCCU/$egCU)*100; if($tiSCCU==0 or $egCU ==0)$ET2CU=0;else $ET2CU=($tiSCCU/$egCU)*100;if($tiTCCU==0 or $egCU ==0)$ET3CU=0;else $ET3CU=($tiTCCU/$egCU)*100;
-
-          if($tiPCSEE==0 or $egSEE ==0)$ETSEE=0;else $ETSEE=($tiPCSEE/$egSEE)*100; if($tiSCSEE==0 or $egSEE ==0)$ET2SEE=0;else $ET2SEE=($tiSCSEE/$egSEE)*100;if($tiTCSEE==0 or $egSEE ==0)$ET3SEE=0;else $ET3SEE=($tiTCSEE/$egSEE)*100;
-
-          if($tiPCMPA==0 or $egMPA ==0)$ETMPA=0;else $ETMPA=($tiPCMPA/$egMPA)*100; if($tiSCMPA==0 or $egMPA ==0)$ET2MPA=0;else $ET2MPA=($tiSCMPA/$egMPA)*100;if($tiTCMPA==0 or $egMPA ==0)$ET3MPA=0;else $ET3MPA=($tiTCMPA/$egMPA)*100;
-
-          if($tiPCCOM==0 or $egCOM ==0)$ETCOM=0;else $ETCOM=($tiPCCOM/$egCOM)*100; if($tiSCCOM==0 or $egCOM ==0)$ET2COM=0;else $ET2COM=($tiSCCOM/$egCOM)*100;if($tiTCCOM==0 or $egCOM ==0)$ET3COM=0;else $ET3COM=($tiTCCOM/$egCOM)*100;
-
-          ?>
-
 <?php
 $QU=$baQu+$tiExQu+$tiPCQu+$tiSCQu+$tiTCQu; //SUMA TOTAL EGRE horizo de cada materia
 $MA=$baMA+$tiExMA+$tiPCMA+$tiSCMA+$tiTCMA;$IN=$baIn+$tiExIn+$tiPCIn+$tiSCIn+$tiTCIn;
@@ -88,7 +55,7 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
             <th class="warning">Efici.Terminal Pnpc_Corte_3</th>
             <th class="success">Efici.Terminal Pnpc_Cor_12</th>
             <th class="success">Efici.Terminal Pnpc_Cor_123</th>
-            <th class="warning">Extemp.</th>
+            <th class="danger">Extemp.</th>
             <th class="warning">Efi. TerminalGlobal</th>
 
 
@@ -110,8 +77,8 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="success">{{round($sq=(($SCT/$total)*100),2)}}%</td>
           <td class="warning">{{round($tq=(($TCT/$total)*100),2)}}%</td>
           <td class="success">{{round($pq+$sq,2)}}%</td>
-          <td>{{round($pq+$sq+$tq,2)}}</td>
-          <td>{{round(($ExQu/$total)*100,2)}}%</td>
+          <td class="success">{{round($pq+$sq+$tq,2)}}</td>
+          <td class="danger">{{round(($ExQu/$total)*100,2)}}%</td>
           <td>{{round((($ExQu+$PCT+$SCT+$TCT)/$total)*100,2)}}%</td>
          <tr>
             <tr>
@@ -125,13 +92,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCQu}}</td>
           <td>{{$ViQu}}</td>
           <td>{{$TeQu}}</td>
-          <td class="success">{{round($tiPCQu/$total,2)}}</td>
-          <td class="success">{{round($tiSCQu/$total,2)}}</td>
-          <td class="warning">{{round($tiTCQu/$total,2)}}</td>
-          <td class="success">{{round($ETQu+$ET2Qu,2)}}</td>
-          <td>{{round($ETQu+$ET2Qu+$ET3Qu,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+          <td class="success">{{round($pQ=(($tiPCQu/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCQu/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCQu/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExQu/$total)*100,2)}}%</td>
+          <td>{{round((($tiExQu+$tiPCQu+$tiSCQu+$tiTCQu)/$total)*100,2)}}%</td>
          <tr>
        
         <tr>
@@ -144,13 +111,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCMA}}</td>
           <td>{{$ViMA}}</td>
           <td>{{$TeMA}}</td>
-          <td>{{round($ETMA,2)}}</td>
-          <td>{{round($ET2MA,2)}}</td>
-          <td>{{round($ET3MA,2)}}</td>
-          <td>{{round($ETMA+$ET2MA,2)}}</td>
-          <td>{{round($ETMA+$ET2MA+$ET3MA,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+          <td class="success">{{round($pMA=(($tiPCMA/$total)*100),2)}}%</td>
+          <td class="success">{{round($sMA=(($tiSCMA/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tMA=(($tiTCMA/$total)*100),2)}}%</td>
+          <td class="success">{{round($pMA+$sMA,2)}}%</td>
+          <td class="success">{{round($pMA+$sMA+$tMA,2)}}%</td>
+          <td class="danger">{{round(($tiExMA/$total)*100,2)}}%</td>
+          <td>{{round((($tiExMA+$tiPCMA+$tiSCMA+$tiTCMA)/$total)*100,2)}}%</td>
          <tr>
 
         <tr>
@@ -163,13 +130,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCIn}}</td>
           <td>{{$ViIn}}</td>
           <td>{{$TeIn}}</td>
-          <td>{{round($ETIn,2)}}</td>
-          <td>{{round($ET2In,2)}}</td>
-          <td>{{round($ET3In,2)}}</td>
-          <td>{{round($ETIn+$ET2In,2)}}</td>
-          <td>{{round($ETIn+$ET2In+$ET3In,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+           <td class="success">{{round($pIn=(($tiPCIn/$total)*100),2)}}%</td>
+          <td class="success">{{round($sIn=(($tiSCIn/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tIn=(($tiTCIn/$total)*100),2)}}%</td>
+          <td class="success">{{round($pIn+$sIn,2)}}%</td>
+          <td class="success">{{round($pIn+$sIn+$tIn,2)}}%</td>
+          <td class="danger">{{round(($tiExIn/$total)*100,2)}}%</td>
+          <td>{{round((($tiExIn+$tiPCIn+$tiSCIn+$tiTCIn)/$total)*100,2)}}%</td>
          <tr>
 
         <tr>
@@ -182,13 +149,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCEl}}</td>
           <td>{{$ViEl}}</td>
           <td>{{$TeEl}}</td>
-          <td>{{round($ETEl,2)}}</td>
-          <td>{{round($ET2El,2)}}</td>
-          <td>{{round($ET3El,2)}}</td>
-          <td>{{round($ETEl+$ET2El,2)}}</td>
-          <td>{{round($ETEl+$ET2El+$ET3El,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+          <td class="success">{{round($pEl=(($tiPCEl/$total)*100),2)}}%</td>
+          <td class="success">{{round($sEl=(($tiSCEl/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tEl=(($tiTCEl/$total)*100),2)}}%</td>
+          <td class="success">{{round($pEl+$sEl,2)}}%</td>
+          <td class="success">{{round($pEl+$sEl+$tEl,2)}}%</td>
+          <td class="danger">{{round(($tiExEl/$total)*100,2)}}%</td>
+          <td>{{round((($tiExEl+$tiPCEl+$tiSCEl+$tiTCEl)/$total)*100,2)}}%</td>
          <tr>
 
         <tr>
@@ -201,13 +168,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCCOM}}</td>
           <td>{{$ViCOM}}</td>
           <td>{{$TeCOM}}</td>
-          <td>{{round($ETCOM,2)}}</td>
-          <td>{{round($ET2COM,2)}}</td>
-          <td>{{round($ET3COM,2)}}</td>
-          <td>{{round($ETCOM+$ET2COM,2)}}</td>
-          <td>{{round($ETCOM+$ET2COM+$ET3COM,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+          <td class="success">{{round($pCOM=(($tiPCCOM/$total)*100),2)}}%</td>
+          <td class="success">{{round($sCOM=(($tiSCCOM/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tCOM=(($tiTCCOM/$total)*100),2)}}%</td>
+          <td class="success">{{round($pCOM+$sCOM,2)}}%</td>
+          <td class="success">{{round($pCOM+$sCOM+$tCOM,2)}}%</td>
+          <td class="danger">{{round(($tiExCOM/$total)*100,2)}}%</td>
+          <td>{{round((($tiExCOM+$tiPCCOM+$tiSCCOM+$tiTCCOM)/$total)*100,2)}}%</td>
         <tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr>
           <td>LGAC Bioquimica</td> 
@@ -219,13 +186,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCBi}}</td>
           <td>{{$ViBi}}</td>
           <td>{{$TeBi}}</td>
-          <td>{{round($ETBi,2)}}</td>
-          <td>{{round($ET2Bi,2)}}</td>
-          <td>{{round($ET3Bi,2)}}</td>
-          <td>{{round($ETBi+$ET2Bi,2)}}</td>
-          <td>{{round($ETBi+$ET2Bi+$ET3Bi,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+          <td class="success">{{round($pBi=(($tiPCBi/$total)*100),2)}}%</td>
+          <td class="success">{{round($sBi=(($tiSCBi/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tBi=(($tiTCBi/$total)*100),2)}}%</td>
+          <td class="success">{{round($pBi+$sBi,2)}}%</td>
+          <td class="success">{{round($pBi+$sBi+$tBi,2)}}%</td>
+          <td class="danger">{{round(($tiExBi/$total)*100,2)}}%</td>
+          <td>{{round((($tiExBi+$tiPCBi+$tiSCBi+$tiTCBi)/$total)*100,2)}}%</td>
          <tr>
 
         <tr>
@@ -238,13 +205,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCCor}}</td>
           <td>{{$ViCor}}</td>
           <td>{{$TeCor}}</td>
-          <td>{{round($ETCor,2)}}</td>
-          <td>{{round($ET2Cor,2)}}</td>
-          <td>{{round($ET3Cor,2)}}</td>
-          <td>{{round($ETCor+$ET2Cor,2)}}</td>
-          <td>{{round($ETCor+$ET2Cor+$ET3Cor,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+          <td class="success">{{round($pCor=(($tiPCCor/$total)*100),2)}}%</td>
+          <td class="success">{{round($sCor=(($tiSCCor/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tCor=(($tiTCCor/$total)*100),2)}}%</td>
+          <td class="success">{{round($pCor+$sCor,2)}}%</td>
+          <td class="success">{{round($pCor+$sCor+$tCor,2)}}%</td>
+          <td class="danger">{{round(($tiExCor/$total)*100,2)}}%</td>
+          <td>{{round((($tiExCor+$tiPCCor+$tiSCCor+$tiTCCor)/$total)*100,2)}}%</td>
          <tr>
 
         <tr>
@@ -257,13 +224,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCCA}}</td>
           <td>{{$ViCA}}</td>
           <td>{{$TeCA}}</td>
-          <td>{{round($ETCA,2)}}</td>
-          <td>{{round($ET2CA,2)}}</td>
-          <td>{{round($ET3CA,2)}}</td>
-          <td>{{round($ETCA+$ET2CA,2)}}</td>
-          <td>{{round($ETCA+$ET2CA+$ET3CA,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+          <td class="success">{{round($pCA=(($tiPCCA/$total)*100),2)}}%</td>
+          <td class="success">{{round($sCA=(($tiSCCA/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tCA=(($tiTCCA/$total)*100),2)}}%</td>
+          <td class="success">{{round($pCA+$sCA,2)}}%</td>
+          <td class="success">{{round($pCA+$sCA+$tCA,2)}}%</td>
+          <td class="danger">{{round(($tiExCA/$total)*100,2)}}%</td>
+          <td>{{round((($tiExCA+$tiPCCA+$tiSCCA+$tiTCCA)/$total)*100,2)}}%</td>
          <tr>
 
         <tr>
@@ -276,13 +243,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCISS}}</td>
           <td>{{$ViISS}}</td>
           <td>{{$TeISS}}</td>
-          <td>{{round($ETISS,2)}}</td>
-          <td>{{round($ET2ISS,2)}}</td>
-          <td>{{round($ET3ISS,2)}}</td>
-          <td>{{round($ETISS+$ET2ISS,2)}}</td>
-          <td>{{round($ETISS+$ET2ISS+$ET3ISS,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+          <td class="success">{{round($pISS=(($tiPCISS/$total)*100),2)}}%</td>
+          <td class="success">{{round($sISS=(($tiSCISS/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tISS=(($tiTCISS/$total)*100),2)}}%</td>
+          <td class="success">{{round($pISS+$sISS,2)}}%</td>
+          <td class="success">{{round($pISS+$sISS+$tISS,2)}}%</td>
+          <td class="danger">{{round(($tiExISS/$total)*100,2)}}%</td>
+          <td>{{round((($tiExISS+$tiPCISS+$tiSCISS+$tiTCISS)/$total)*100,2)}}%</td>
          <tr>
 
         <tr>
@@ -295,13 +262,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCCU}}</td>
           <td>{{$ViCU}}</td>
           <td>{{$TeCU}}</td>
-          <td>{{round($ETCU,2)}}</td>
-          <td>{{round($ET2CU,2)}}</td>
-          <td>{{round($ET3CU,2)}}</td>
-          <td>{{round($ETCU+$ET2CU,2)}}</td>
-          <td>{{round($ETCU+$ET2CU+$ET3CU,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+          <td class="success">{{round($pCU=(($tiPCCU/$total)*100),2)}}%</td>
+          <td class="success">{{round($sCU=(($tiSCCU/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tCU=(($tiTCCU/$total)*100),2)}}%</td>
+          <td class="success">{{round($pCU+$sCU,2)}}%</td>
+          <td class="success">{{round($pCU+$sCU+$tCU,2)}}%</td>
+          <td class="danger">{{round(($tiExCU/$total)*100,2)}}%</td>
+          <td>{{round((($tiExCU+$tiPCCU+$tiSCCU+$tiTCCU)/$total)*100,2)}}%</td>
          <tr>
 
         <tr>
@@ -314,13 +281,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCSEE}}</td>
           <td>{{$ViSEE}}</td>
           <td>{{$TeSEE}}</td>
-          <td>{{round($ETSEE,2)}}</td>
-          <td>{{round($ET2SEE,2)}}</td>
-          <td>{{round($ET3SEE,2)}}</td>
-          <td>{{round($ETSEE+$ET2SEE,2)}}</td>
-          <td>{{round($ETSEE+$ET2SEE+$ET3SEE,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+          <td class="success">{{round($pSEE=(($tiPCSEE/$total)*100),2)}}%</td>
+          <td class="success">{{round($sSEE=(($tiSCSEE/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tSEE=(($tiTCSEE/$total)*100),2)}}%</td>
+          <td class="success">{{round($pSEE+$sSEE,2)}}%</td>
+          <td class="success">{{round($pSEE+$sSEE+$tSEE,2)}}%</td>
+          <td class="danger">{{round(($tiExSEE/$total)*100,2)}}%</td>
+          <td>{{round((($tiExSEE+$tiPCSEE+$tiSCSEE+$tiTCSEE)/$total)*100,2)}}%</td>
          <tr>
 
         <tr>
@@ -333,13 +300,13 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
           <td class="warning">{{$tiTCMPA}}</td>
           <td>{{$ViMPA}}</td>
           <td>{{$TeMPA}}</td>
-          <td>{{round($ETMPA,2)}}</td>
-          <td>{{round($ET2MPA,2)}}</td>
-          <td>{{round($ET3MPA,2)}}</td>
-          <td>{{round($ETMPA+$ET2MPA,2)}}</td>
-          <td>{{round($ETMPA+$ET2MPA+$ET3MPA,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
+          <td class="success">{{round($pMPA=(($tiPCMPA/$total)*100),2)}}%</td>
+          <td class="success">{{round($sMPA=(($tiSCMPA/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tMPA=(($tiTCMPA/$total)*100),2)}}%</td>
+          <td class="success">{{round($pMPA+$sMPA,2)}}%</td>
+          <td class="success">{{round($pMPA+$sMPA+$tMPA,2)}}%</td>
+          <td class="danger">{{round(($tiExMPA/$total)*100,2)}}%</td>
+          <td>{{round((($tiExMPA+$tiPCMPA+$tiSCMPA+$tiTCMPA)/$total)*100,2)}}%</td>
          <tr>
 
      

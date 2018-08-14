@@ -5,8 +5,8 @@
     <a class="active" href="{{URL::action('AlumnoController@index')}}"><span class="  glyphicon glyphicon-circle-arrow-left "></span> Regresar</a>
     <a href="#" ><img class="rightedit"   width="20%" src="{{ asset('imagen/esta.png') }}"></a>
   </div>
-  <label id="finalizar" class="text-danger" name='finalizar'> Proximos a finalizar </label>
-  <label id="grupoelegir" class="text-danger" name='finalizar'> Con quien decea trabajar: </label>
+  <label id="finalizar" class="text-danger" name='finalizar'> Consulta Alumnos  </label>
+  <label id="grupoelegir" class="text-danger" name='finalizar'> Con quien desea trabajar: </label>
   <div class="ex3">
     <img id="containerEx3" width="12%" onclick="location.href='{{URL::action('AlumnoController@index')}}'" src="{{ asset('imagen/graduates.png') }}" alt="Cinque Terre" >
     <img id="alumno" width="12%"  src="{{ asset('imagen/presentation.png') }}" alt="Alumnos" >
@@ -15,8 +15,9 @@
   <label id="laEs" class="text-danger" > Docentes   </label>
   <label id="laAs" class="text-danger" > Asignar </label>
   </div>
-  <br><br><input type="button" onclick="location.href='{{URL::action('AdminController@indicador',$num=0)}}'" class="btn 
-        btn-success"  value="Maestria"></><span  class="glyphicon glyphicon-user"></span>
+  <br><br><input id="boton" type="button" onclick="location.href='{{URL::action('AdminController@indicador',$num=0)}}'
+  " class="btn btn-success"  value="Indicadores Eficiencia Terminal MyDCI_Maestria"></>
+        <span  class="glyphicon glyphicon-user"></span>
 
   <br><br><input type="button" onclick="location.href='{{URL::action('AdminController@indicador',$num=2)}}'" class="btn 
         btn-success"  value="Doctorado"></><span  class="glyphicon glyphicon-user"></span>
@@ -51,3 +52,10 @@ echo "<tbody>";
 echo " </tbody>";
  //echo"<input type='text' name='titulo' class ='titulo'  value=".$interval->format('%R%a días').">"; 
 ?>
+
+<style>
+#boton{
+  white-space: normal;
+  text-align: center;
+}
+</style>

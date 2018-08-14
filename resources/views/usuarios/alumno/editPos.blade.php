@@ -23,18 +23,13 @@
       </div>
       @endif
 
-     {!!Form::model($Alumno,['method'=>'PATCH','route'=>['upedit',$Alumno->id]])!!}
+     {!!Form::model($Alumno,['method'=>'PATCH','route'=>['upeditPos',$Alumno->id]])!!}
 
       {{Form::token()}}
-    <dir><dir></br></br>
+    <dir><dir></br></br></br>
     <div >
-      <select id="Academica" REQUIRED name ="Academica" class="primero" onchange="return academia();">
-        <option value='no' selected class="primero">- Unidad Academica-</b></option>
-        <option value='FCQI'>FCQI</option>
-        <option value='Tecate'>Tecate</option>
-        <option value='Valle Palmas'>Valle Palmas</option>
-      </select></br></br></br>
-       <select id="campoconocimiento" REQUIRED name="campoconocimiento" class="primero" onchange="return campos();">
+      
+       <select id="campoconocimiento" REQUIRED name="campoconocimiento" class="primero">
         <option value='no' selected >- Campo Conocimiento -</b></option>
         <option value='quimica'>Quimica</option>
         <option value='medio'>Medio Ambiente</option>
@@ -43,16 +38,26 @@
         <option value='Computacion'>Computacion</option>
       </select></br></br></br>
   
-      <select  REQUIRED name="grado" class="primero"  onchange="return grad();">
+      <select  REQUIRED name="grado" class="primero" >
         <option value='no' selected  >-Grado-</b></option>
         <option value='MI'>MI</option>
         <option value='MC'>MC</option>
         <option value='DI'>DI</option>
         <option value='DC'>DC</option>
+      </select></br></br>
+      <br>
+       <select name ="cono" REQUIRED name="campoconocimiento" class="primero" onchange="return campos();">
+        <option value='no' selected >- Campo Conocimiento -</b></option>
+        <option value='Quimica'>Quimica</option>
+        <option value='Medio Ambiente'>Medio Ambiente</option>
+        <option value='Industrial'>Industrial</option>
+        <option value='Electrica'>Electrica</option>
+        <option value='Computacion'>Computacion</option>
       </select></br></br></br>
-      <input  type="text" REQUIRED name="dirtesis"   placeholder="{{$Alumno->director}}">
-      <br><input type="text" REQUIRED name="cotesis" placeholder="{{$Alumno->codirector}}">
-      <br><input type="text" REQUIRED name="SAGCC"  placeholder="{{$Alumno->SAGCC}}">
+      <label > .Director</b></br><input  type="text" name="dirtesis"  value="{{$Alumno->director}}"></label>
+      <br><label > .Codirector</b></br><input type="text"  name="cotesis" value="{{$Alumno->codirector}}"></label>
+
+     {{--  <input type="text" REQUIRED name="SAGCC"  placeholder="{{$Alumno->SAGCC}}"> --}}
 
       <div>
         <button class="btn btn-success" type="submit">Guardar</button>
@@ -64,7 +69,7 @@
      <select   REQUIRED name="LGAC"  id="lgac" class="segundo" onchange="return lgac();">
       <option value='no' selected >- LGAC Asociada -</b></option>
       <option value='bioquimica'>Bioquimica</option>
-      <option value='corrymate'>Corrocion y Materiales</option>
+      <option value='corrymate'>Corrosion y Materiales</option>
       <option value='conam'>Contaminacion Ambiental</option>
       <option value='softysimua'>Ing.Software y simulacion social </option>
       <option value='commovil'>Computo movil y oblicuo</option>
@@ -80,7 +85,8 @@
         <option value='Vigente' selected >- Vigente -</b></option>
         <option value='Bajo'>Baja</option>
         <option value='Tesista'>Tesista</option>
-        <option value='Tesista'>Egresado</option>
+        <option value='Egresado'>Egresado</option>
+        <option value='Extemporaneo'>Extemporaneo</option>
     </select>
     
 

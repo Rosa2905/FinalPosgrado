@@ -1,191 +1,28 @@
-   <?php
-         $num;
-          $ETQu;$ET2Qu;$ET3Qu;$ET12;  $ETMA;$ET2MA;$ET3MA; $ETIn;$ET2In;$ET3In;  $ETEl;$ET2El;$ET3El; $ETBi;$ET2Bi;$ET3Bi; $ETCor;$ET2Cor;$ET3Cor; 
-          $ETCA;$ET2CA;$ET3CA;  $ETISS;$ET2ISS;$ET3ISS; $ETCU;$ET2CU;$ET3CU; $ETSEE;$ET2SEE;$ET3SEE; $ETMPA;$ET2MPA;$ET3MPA; $ETCOM;$ET2COM;$ET3COM;
+<?php
+$QuD=$baQuD+$tiExQuD+$tiPCQuD+$tiSCQuD+$tiTCQuD; //SUMAD TOTAL EGRE horizo de CADda MADteria
+$MAD=$baMAD+$tiExMAD+$tiPCMAD+$tiSCMAD+$tiTCMAD;$InD=$baInD+$tiExInD+$tiPCInD+$tiSCInD+$tiTCInD;
+$ElD=$baElD+$tiExElD+$tiPCElD+$tiSCElD+$tiTCElD;$COMD=$baCOMD+$tiExCOMD+$tiPCCOMD+$tiSCCOMD+$tiTCCOMD;
+$BID=$baBiD+$tiExBiD+$tiPCBiD+$tiSCBiD+$tiTCBiD;$LCMD=$baCorD+$tiExCorD+$tiPCCorD+$tiSCCorD+$tiTCCorD;
+$CAD=$baCAD+$tiExCAD+$tiPCCAD+$tiSCCAD+$tiTCCAD;$ISSD=$baISSD+$tiExISSD+$tiPCISSD+$tiSCISSD+$tiTCISSD;
+$CUD=$baCUD+$tiExCUD+$tiPCCUD+$tiSCCUD+$tiTCCUD;$SEED=$baSEED+$tiExSEED+$tiPCSEED+$tiSCSEED+$tiTCSEED;
+$MPAD=$baMPAD+$tiExMPAD+$tiPCMPAD+$tiSCMPAD+$tiTCMPAD;
 
-          if($tiPCQuD==0 or $egQuD ==0)$ETQuD=0;else $ETQuD=($tiPCQuD/$egQuD)*100; if($tiSCQuD==0 or $egQuD ==0)$ET2QuD=0;else $ET2QuD=($tiSCQuD/$egQuD)*100;if($tiTCQuD==0 or $egQuD ==0)$ET3QuD=0;else $ET3QuD=($tiTCQuD/$egQuD)*100;
+$bT=$baQuD+$baMAD+$baInD+$baElD+$baCOMD; $ExQuD=$tiExQuD+$tiExMAD+$tiExInD+$tiExElD+$tiExCOMD;
+$PCT=$tiPCQuD+$tiPCMAD+$tiPCInD+$tiPCElD+$tiPCCOMD ;$SCT=$tiSCQuD+$tiSCMAD+$tiSCInD+$tiSCElD+$tiSCCOMD;
+$TCT=$tiTCQuD+$tiTCMAD+$tiTCInD+$tiTCElD+$tiTCCOMD; 
+$Vi=$ViQuD+$ViMAD+$ViInD+$ViElD+$ViCOMD;$Te=$TeQuD+$TeMAD+$TeInD+$TeElD+$TeCOMD;
+$total=$bT+$ExQuD+$SCT+$TCT+$PCT; //Total PrograMAD
+?>
 
-          if($tiPCMAD==0 or $egMAD ==0)$ETMAD=0;else $ETMAD=($tiPCMAD/$egMAD)*100; if($tiSCMAD==0 or $egMAD ==0)$ET2MAD=0;else $ET2MAD=($tiSCMAD/$egMAD)*100;if($tiTCMAD==0 or $egMAD ==0)$ET3MAD=0;else $ET3MAD=($tiTCMAD/$egMAD)*100;
-
-
-          if($tiPCInD==0 or $egInD ==0)$ETInD=0;else $ETInD=($tiPCInD/$egInD)*100; if($tiSCInD==0 or $egInD ==0)$ET2InD=0;else $ET2InD=($tiSCInD/$egInD)*100;if($tiTCInD==0 or $egInD ==0)$ET3InD=0;else $ET3InD=($tiTCInD/$egInD)*100;
-
-
-          if($tiPCElD==0 or $egElD ==0)$ETlD=0;else $ETlD=($tiPCElD/$egElD)*100; if($tiSCElD==0 or $egElD ==0)$ET2ElD=0;else $ET2ElD=($tiSCElD/$egElD)*100;if($tiTCElD==0 or $egElD ==0)$ET3ElD=0;else $ET3ElD=($tiTCElD/$egElD)*100;
-
-          if($tiPCBiD==0 or $egBiD ==0)$ETBiD=0;else $ETBiD=($tiPCBiD/$egBiD)*100; if($tiSCBiD==0 or $egBiD ==0)$ET2BiD=0;else $ET2BiD=($tiSCBiD/$egBiD)*100;if($tiTCBiD==0 or $egBiD ==0)$ET3BiD=0;else $ET3BiD=($tiTCBiD/$egBiD)*100;
-
-          if($tiPCCorD==0 or $egCorD ==0)$ETCorD=0;else $ETCorD=($tiPCCorD/$egCorD)*100; if($tiSCCorD==0 or $egCorD ==0)$ET2CorD=0;else $ET2CorD=($tiSCCorD/$egCorD)*100;if($tiTCCorD==0 or $egCorD ==0)$ET3CorD=0;else $ET3CorD=($tiTCCorD/$egCorD)*100;
-
-          if($tiPCCAD==0 or $egCAD ==0)$ETCAD=0;else $ETCAD=($tiPCCAD/$egCAD)*100; if($tiSCCAD==0 or $egCAD ==0)$ET2CAD=0;else $ET2CAD=($tiSCCAD/$egCAD)*100;if($tiTCCAD==0 or $egCAD ==0)$ET3CAD=0;else $ET3CAD=($tiTCCAD/$egCAD)*100;
-
-          if($tiPCISSD==0 or $egISSD ==0)$ETISSD=0;else $ETISSD=($tiPCISSD/$egISSD)*100; if($tiSCISSD==0 or $egISSD ==0)$ET2ISSD=0;else $ET2ISSD=($tiSCISSD/$egISSD)*100;if($tiTCISSD==0 or $egISSD ==0)$ET3ISSD=0;else $ET3ISSD=($tiTCISSD/$egISSD)*100;
-
-          if($tiPCCUD==0 or $egCUD ==0)$ETCUD=0;else $ETCUD=($tiPCCUD/$egCUD)*100; if($tiSCCUD==0 or $egCUD ==0)$ET2CUD=0;else $ET2CUD=($tiSCCUD/$egCUD)*100;if($tiTCCUD==0 or $egCUD ==0)$ET3CUD=0;else $ET3CUD=($tiTCCUD/$egCUD)*100;
-
-          if($tiPCSEED==0 or $egSEED ==0)$ETSEED=0;else $ETSEED=($tiPCSEED/$egSEED)*100; if($tiSCSEED==0 or $egSEED ==0)$ET2SEED=0;else $ET2SEED=($tiSCSEED/$egSEED)*100;if($tiTCSEED==0 or $egSEED ==0)$ET3SEED=0;else $ET3SEED=($tiTCSEED/$egSEED)*100;
-
-          if($tiPCMPAD==0 or $egMPAD ==0)$ETMPAD=0;else $ETMPAD=($tiPCMPAD/$egMPAD)*100; if($tiSCMPAD==0 or $egMPAD ==0)$ET2MPAD=0;else $ET2MPAD=($tiSCMPAD/$egMPAD)*100;if($tiTCMPAD==0 or $egMPAD ==0)$ET3MPAD=0;else $ET3MPAD=($tiTCMPAD/$egMPAD)*100;
-
-          if($tiPCCOMD==0 or $egCOMD ==0)$ETCOMD=0;else $ETCOMD=($tiPCCOMD/$egCOMD)*100; if($tiSCCOMD==0 or $egCOMD ==0)$ET2COMD=0;else $ET2COMD=($tiSCCOMD/$egCOMD)*100;if($tiTCCOMD==0 or $egCOMD ==0)$ET3COMD=0;else $ET3COMD=($tiTCCOMD/$egCOMD)*100;
-
-          ?>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <center><h3>Indicadores Historicos de Eficiencia Terminal del programa MyDCI</h3></center>
-    <center><h3><u>DOCTORADO</u></h3></center>
-
-    <table class="table table-striped table-bordered "   >
-    <tr >
-      <th class="info"></th>
-      <th class="success">Efici.Terminal Pnpc_Corte_1</th>
-      <th class="success">Efici.Terminal Pnpc_Corte_2</th>
-      <th class="warning">Efici.Terminal Pnpc_Corte_3</th>
-      <th class="warning">Efici.Terminal Pnpc_Cor_12</th>
-      <th class="warning">Efici.Terminal Pnpc_Cor_123</th>
-      <th class="warning">Extemp.</th>
-      <th class="warning">Efi. TerminalGlobal</th>
-    </tr>
-        <tr>
-          <td>SACC_Quimica</td> 
-          <td>{{round($ETQuD,2)}}</td>
-          <td>{{round($ET2QuD,2)}}</td>
-          <td>{{round($ET3QuD,2)}}</td>
-          <td>{{round($ETQuD+$ET2QuD,2)}}</td>
-          <td>{{round($ETQuD+$ET2QuD+$ET3QuD,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
-        </tr>
-
-        <tr>
-          <td>SACC_Medio.Amb</td> 
-          <td>{{round($ETMAD,2)}}</td>
-          <td>{{round($ET2MAD,2)}}</td>
-          <td>{{round($ET3MAD,2)}}</td>
-          <td>{{round($ETMAD+$ET2MAD,2)}}</td>
-          <td>{{round($ETMAD+$ET2MAD+$ET3MAD,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
-         </tr>
-
-          <tr>
-          <td>SACC_Industrial</td> 
-          <td>{{round($ETInD,2)}}</td>
-          <td>{{round($ET2InD,2)}}</td>
-          <td>{{round($ET3InD,2)}}</td>
-          <td>{{round($ETInD+$ET2InD,2)}}</td>
-          <td>{{round($ETInD+$ET2InD+$ET3InD,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
-         </tr>
-
-         <tr>
-          <td>SACC_Electrica</td> 
-          <td>{{round($ETlD,2)}}</td>
-          <td>{{round($ET2ElD,2)}}</td>
-          <td>{{round($ET3ElD,2)}}</td>
-          <td>{{round($ETlD+$ET2ElD,2)}}</td>
-          <td>{{round($ETlD+$ET2ElD+$ET3ElD,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
-         </tr>
-
-        <tr>
-          <td>SACC_Computacion</td> 
-          <<td>{{round($ETCOMD,2)}}</td>
-          <td>{{round($ET2COMD,2)}}</td>
-          <td>{{round($ET3COMD,2)}}</td>
-          <td>{{round($ETCOMD+$ET2COMD,2)}}</td>
-          <td>{{round($ETCOMD+$ET2COMD+$ET3COMD,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
-        </tr>
-
-        <tr>
-          <td>LGAC Bioquimica</td> 
-          <td>{{round($ETBiD,2)}}</td>
-          <td>{{round($ET2BiD,2)}}</td>
-          <td>{{round($ET3BiD,2)}}</td>
-          <td>{{round($ETBiD+$ET2BiD,2)}}</td>
-          <td>{{round($ETBiD+$ET2BiD+$ET3BiD,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
-        </tr>
-
-        <tr>
-          <td>LGAC Corrosion Y Materiales</td> 
-          <td>{{round($ETCorD,2)}}</td>
-          <td>{{round($ET2CorD,2)}}</td>
-          <td>{{round($ET3CorD,2)}}</td>
-          <td>{{round($ETCorD+$ET2CorD,2)}}</td>
-          <td>{{round($ETCorD+$ET2CorD+$ET3CorD,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
-        </tr>
-
-
-        <tr>
-          <td>LGAC Contam. Ambiental</td> 
-          <td>{{round($ETCAD,2)}}</td>
-          <td>{{round($ET2CAD,2)}}</td>
-          <td>{{round($ET3CAD,2)}}</td>
-          <td>{{round($ETCAD+$ET2CAD,2)}}</td>
-          <td>{{round($ETCAD+$ET2CAD+$ET3CAD,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
-         </tr>
-      
-        <tr>
-          <td>LGAC Ing.Software y simulacion social</td> 
-          <td>{{round($ETISSD,2)}}</td>
-          <td>{{round($ET2ISSD,2)}}</td>
-          <td>{{round($ET3ISSD,2)}}</td>
-          <td>{{round($ETISSD+$ET2ISSD,2)}}</td>
-          <td>{{round($ETISSD+$ET2ISSD+$ET3ISSD,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
-        </tr>
-
-        <tr>
-          <td>LGAC Computo movil y oblicuo</td> 
-          <td>{{round($ETCUD,2)}}</td>
-          <td>{{round($ET2CUD,2)}}</td>
-          <td>{{round($ET3CUD,2)}}</td>
-          <td>{{round($ETCUD+$ET2CUD,2)}}</td>
-          <td>{{round($ETCUD+$ET2CUD+$ET3CUD,2)}}</td>
-          <td>falta</td>
-          <td>falta</td>
-         </tr>
-
-         <tr>
-            <td>LGAC Sistemas electri._y_electronicos</td> 
-            <td>{{round($ETSEED,2)}}</td>
-            <td>{{round($ET2SEED,2)}}</td>
-            <td>{{round($ET3SEED,2)}}</td>
-            <td>{{round($ETSEED+$ET2SEED,2)}}</td>
-            <td>{{round($ETSEED+$ET2SEED+$ET3SEED,2)}}</td>
-            <td>falta</td>
-            <td>falta</td>
-         </tr>
-
-          <tr>
-            <td>Manufactura produccion_y_calidad</td> 
-            <td>{{round($ETMPAD,2)}}</td>
-            <td>{{round($ET2MPAD,2)}}</td>
-            <td>{{round($ET3MPAD,2)}}</td>
-            <td>{{round($ETMPAD+$ET2MPAD,2)}}</td>
-            <td>{{round($ETMPAD+$ET2MPAD+$ET3MPAD,2)}}</td>
-            <td>falta</td>
-            <td>falta</td>
-         <tr>
-
-          </table> 
-
-       {{-- <table class="table table-striped table-bordered "   >
+    <center><h3><u>DOCTORADO</u>  Indicadores Historicos de Eficiencia Terminal del programa MyDCI</h3></center>
+  
+     <table id="tabla" class="table table-striped table-bordered "   >
          <tr >
           <th ></th>
             <th >Total Egres</th>
@@ -196,107 +33,323 @@
             <th class="warning">Titulado 3er_Corte</th>
             <th >Vigente</th>
             <th >Tesista</th>
-        </tr> --}}
-        {{-- <tr>
+        </tr>
+         <tr>
+          <td>  Programa</td>
+          <td>{{$total}}</td>
+          <td>{{$bT}}</td> 
+          <td class="danger">{{$ExQuD}}</td>}}</td>
+          <td class="success">{{$PCT}}</td>
+          <td class="success">{{$SCT}}</td>
+          <td class="warning">{{$TCT}}</td>
+
+          <td>{{$Vi}}</td>
+          <td>{{$Te}}</td>
+        </tr>
+        <tr>
           <td>SACC_Quimica</td> 
          
-          <td>{{$egQu}}</td>
-          <td>{{$baQu}}</td>
-          <td class="danger">falta</td>
-          <td class="success">{{$tiPCQu}}</td>
-          <td class="success">{{$tiSCQu}}</td>
-          <td class="warning">{{$tiTCQu}}</td>
-          <td>{{$ViQu}}</td>
-          <td>{{$TeQu}}</td>
+         <td>{{$QuD}}</td>
+          <td>{{$baQuD}}</td>
+          <td class="danger">{{$tiExQuD}}</td>
+          <td class="success">{{$tiPCQuD}}</td>
+          <td class="success">{{$tiSCQuD}}</td>
+          <td class="warning">{{$tiTCQuD}}</td>
+          <td>{{$ViQuD}}</td>
+          <td>{{$TeQuD}}</td>
         </tr>
 
         <tr>
           <td>SACC_Medio.Amb</td> 
-          <td>{{$egMA}}</td>
-          <td>{{$baMA}}</td>
-          <td class="danger">falta</td>
-          <td class="success">{{$tiPCMA}}</td>
-          <td class="success">{{$tiSCMA}}</td>
-          <td class="warning">{{$tiTCMA}}</td>
-          <td>{{$ViMA}}</td>
-          <td>{{$TeMA}}</td>
+          <td>{{$MAD}}</td>
+          <td>{{$baMAD}}</td>
+          <td class="danger">{{$tiExMAD}}</td>
+          <td class="success">{{$tiPCMAD}}</td>
+          <td class="success">{{$tiSCMAD}}</td>
+          <td class="warning">{{$tiTCMAD}}</td>
+          <td>{{$ViMAD}}</td>
+          <td>{{$TeMAD}}</td>
          </tr>
 
           <tr>
           <td>SACC_Industrial</td> 
-          <td>{{$egIn}}</td>
-          <td>{{$baIn}}</td>
-          <td class="danger">falta</td>
-          <td class="success">{{$tiPCIn}}</td>
-          <td class="success">{{$tiSCIn}}</td>
-          <td class="warning">{{$tiTCIn}}</td>
-          <td>{{$ViIn}}</td>
-          <td>{{$TeIn}}</td>
+          <td>{{$InD}}</td>
+          <td>{{$baInD}}</td>
+          <td class="danger">{{$tiExInD}}</td>
+          <td class="success">{{$tiPCInD}}</td>
+          <td class="success">{{$tiSCInD}}</td>
+          <td class="warnInDg">{{$tiTCInD}}</td>
+          <td>{{$ViInD}}</td>
+          <td>{{$TeInD}}</td>
          </tr>
 
          <tr>
           <td>SACC_Electrica</td> 
-          <td>{{$egEl}}</td>
-          <td>{{$baEl}}</td>
-          <td class="danger">falta</td>
-          <td class="success">{{$tiPCEl}}</td>
-          <td class="success">{{$tiSCEl}}</td>
-          <td class="warning">{{$tiTCEl}}</td>
-          <td>{{$ViEl}}</td>
-          <td>{{$TeEl}}</td>
+          <td>{{$ElD}}</td>
+          <td>{{$baElD}}</td>
+          <td class="danger">{{$tiExElD}}</td>
+          <td class="success">{{$tiPCElD}}</td>
+          <td class="success">{{$tiSCElD}}</td>
+          <td class="warning">{{$tiTCElD}}</td>
+          <td>{{$ViElD}}</td>
+          <td>{{$TeElD}}</td>
          </tr>
 
         <tr>
           <td>SACC_Computacion</td> 
-          <td>{{$egCOM}}</td>
-          <td>{{$baCOM}}</td>
-          <td class="danger">falta</td>
-          <td class="success">{{$tiPCCOM}}</td>
-          <td class="success">{{$tiSCCOM}}</td>
-          <td class="warning">{{$tiTCCOM}}</td>
-          <td>{{$ViCOM}}</td>
-          <td>{{$TeCOM}}</td>
+          <td>{{$COMD}}</td>
+          <td>{{$baCOMD}}</td>
+          <td class="danger">{{$tiExCOMD}}</td>
+          <td class="success">{{$tiPCCOMD}}</td>
+          <td class="success">{{$tiSCCOMD}}</td>
+          <td class="warning">{{$tiTCCOMD}}</td>
+          <td>{{$ViCOMD}}</td>
+          <td>{{$TeCOMD}}</td>
         </tr>
 
         <tr>
           <td>LGAC Bioquimica</td> 
-          <td>{{$egBi}}</td>
-          <td>{{$baBi}}</td>
-          <td class="danger">falta</td>
-          <td class="success">{{$tiPCBi}}</td>
-          <td class="success">{{$tiSCBi}}</td>
-          <td class="warning">{{$tiTCBi}}</td>
-          <td>{{$ViBi}}</td>
-          <td>{{$TeBi}}</td>
+          <td>{{$BID}}</td>
+          <td>{{$baBiD}}</td>
+          <td class="danger">{{$tiExBiD}}</td>
+          <td class="success">{{$tiPCBiD}}</td>
+          <td class="success">{{$tiSCBiD}}</td>
+          <td class="warning">{{$tiTCBiD}}</td>
+          <td>{{$ViBiD}}</td>
+          <td>{{$TeBiD}}</td>
         </tr>
 
         <tr>
           <td>LGAC Corrosion Y Materiales</td> 
-          <td>{{$egCor}}</td>
-          <td>{{$baCor}}</td>
-          <td class="danger">falta</td>
-          <td class="success">{{$tiPCCor}}</td>
-          <td class="success">{{$tiSCCor}}</td>
-          <td class="warning">{{$tiTCCor}}</td>
-          <td>{{$ViCor}}</td>
-          <td>{{$TeCor}}</td>
+         <td>{{$LCMD}}</td>
+          <td>{{$baCorD}}</td>
+          <td class="danger">{{$tiExCorD}}</td>
+          <td class="success">{{$tiPCCorD}}</td>
+          <td class="success">{{$tiSCCorD}}</td>
+          <td class="warning">{{$tiTCCorD}}</td>
+          <td>{{$ViCorD}}</td>
+          <td>{{$TeCorD}}</td>
         </tr>
 
 
         <tr>
           <td>LGAC Contam. Ambiental</td> 
-          <td>{{$egCA}}</td>
-          <td>{{$baCA}}</td>
-          <td class="danger">falta</td>
-          <td class="success">{{$tiPCCA}}</td>
-          <td class="success">{{$tiSCCA}}</td>
-          <td class="warning">{{$tiTCCA}}</td>
-          <td>{{$ViCA}}</td>
-          <td>{{$TeCA}}</td>
+          <td>{{$CAD}}</td>
+          <td>{{$baCAD}}</td>
+          <td class="danger">{{$tiExCAD}}</td>
+          <td class="success">{{$tiPCCAD}}</td>
+          <td class="success">{{$tiSCCAD}}</td>
+          <td class="warning">{{$tiTCCAD}}</td>
+          <td>{{$ViCAD}}</td>
+          <td>{{$TeCAD}}</td>
+         </tr>
+        <tr>
+          <td>LGAC Ing.Software y simulacion social</td> 
+          <td>{{$ISSD}}</td>
+          <td>{{$baISSD}}</td>
+          <td class="danger">{{$tiExISSD}}</td>
+          <td class="success">{{$tiPCISSD}}</td>
+          <td class="success">{{$tiSCISSD}}</td>
+          <td class="warning">{{$tiTCISSD}}</td>
+          <td>{{$ViISSD}}</td>
+          <td>{{$TeISSD}}</td>
+         </tr>
+
+        <tr>
+          <td>LGAC Computo movil y oblicuo</td> 
+          <td>{{$CUD}}</td>
+          <td>{{$baCUD}}</td>
+          <td class="danger">{{$tiExCUD}}</td>
+          <td class="success">{{$tiPCCUD}}</td>
+          <td class="success">{{$tiSCCUD}}</td>
+          <td class="warning">{{$tiTCCUD}}</td>
+          <td>{{$ViCUD}}</td>
+          <td>{{$TeCUD}}</td>
+         </tr>
+
+        <tr>
+          <td>LGAC Sistemas electri._y_electronicos</td> 
+          <td>{{$SEED}}</td>
+          <td>{{$baSEED}}</td>
+          <td class="danger">{{$tiExSEED}}</td>
+          <td class="success">{{$tiPCSEED}}</td>
+          <td class="success">{{$tiSCSEED}}</td>
+          <td class="warning">{{$tiTCSEED}}</td>
+          <td>{{$ViSEED}}</td>
+          <td>{{$TeSEED}}</td>
+         </tr>
+
+        <tr>
+          <td>Manufactura produccion_y_calidad</td> 
+          <td>{{$MPAD}}</td>
+          <td>{{$baMPAD}}</td>
+          <td class="danger">{{$tiExMPAD}}</td>
+          <td class="success">{{$tiPCMPAD}}</td>
+          <td class="success">{{$tiSCMPAD}}</td>
+          <td class="warning">{{$tiTCMPAD}}</td>
+          <td>{{$ViMPAD}}</td>
+          <td>{{$TeMPAD}}</td>
          </tr>
       </table>   
        
-     --}}
+    
+
+    <table id="tabla "class="table table-striped table-bordered "   >
+    <tr >
+      <th class="info"></th>
+      <th class="success">PNPC_Corte1 </th>
+      <th class="success">PNPC_Corte2 </th>
+      <th class="warning">PNPC_Corte3 </th>
+      <th class="warning">PNPC_Cor12 </th>
+      <th class="warning">PNPC_Cor123 </th>
+      <th class="warning">Extempora</th>
+      <th class="warning">Ter Global</th>
+    </tr>
+       <tr>
+          <td>  Programa</td>
+          <td class="success">{{round($pq=(($PCT/$total)*100),2)}}%</td>
+          <td class="success">{{round($sq=(($SCT/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tq=(($TCT/$total)*100),2)}}%</td>
+          <td class="success">{{round($pq+$sq,2)}}%</td>
+          <td class="success">{{round($pq+$sq+$tq,2)}}</td>
+          <td class="danger">{{round(($ExQuD/$total)*100,2)}}%</td>
+          <td>{{round((($ExQuD+$PCT+$SCT+$TCT)/$total)*100,2)}}%</td> 
+        </tr>
+        
+        <tr>
+          <td>SACC_Quimica</td> 
+          <td class="success">{{round($pQ=(($tiPCQuD/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCQuD/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCQuD/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExQuD/$total)*100,2)}}%</td>
+          <td>{{round((($tiExQuD+$tiPCQuD+$tiSCQuD+$tiTCQuD)/$total)*100,2)}}%</td>
+         </tr>
+
+        <tr>
+          <td>SACC_Medio.Amb</td> 
+          <td class="success">{{round($pQ=(($tiPCMAD/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCMAD/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCMAD/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExMAD/$total)*100,2)}}%</td>
+          <td>{{round((($tiExMAD+$tiPCMAD+$tiSCMAD+$tiTCMAD)/$total)*100,2)}}%</td>
+         </tr>
+<tr>
+          <td>SACC_Industrial</td> 
+         <td class="success">{{round($pQ=(($tiPCInD/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCInD/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCInD/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExInD/$total)*100,2)}}%</td>
+          <td>{{round((($tiExInD+$tiPCInD+$tiSCInD+$tiTCInD)/$total)*100,2)}}%</td>
+         </tr>
+
+        <tr>
+          <td>SACC_Electrica</td> 
+          <td class="success">{{round($pQ=(($tiPCElD/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCElD/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCElD/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExElD/$total)*100,2)}}%</td>
+          <td>{{round((($tiExElD+$tiPCElD+$tiSCElD+$tiTCElD)/$total)*100,2)}}%</td>
+         </tr>
+
+        <tr>
+          <td>SACC_Computacion</td> 
+          <td class="success">{{round($pQ=(($tiPCCOMD/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCCOMD/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCCOMD/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExCOMD/$total)*100,2)}}%</td>
+          <td>{{round((($tiExCOMD+$tiPCCOMD+$tiSCCOMD+$tiTCCOMD)/$total)*100,2)}}%</td>
+        </tr>
+
+        <tr>
+          <td>LGAC Bioquimica</td> 
+          <td class="success">{{round($pQ=(($tiPCBiD/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCBiD/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCBiD/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExBiD/$total)*100,2)}}%</td>
+          <td>{{round((($tiExBiD+$tiPCBiD+$tiSCBiD+$tiTCBiD)/$total)*100,2)}}%</td>
+         </tr>
+
+        <tr>
+          <td>LGAC Corrosion Y Materiales</td> 
+          <td class="success">{{round($pQ=(($tiPCCorD/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCCorD/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCCorD/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExCorD/$total)*100,2)}}%</td>
+          <td>{{round((($tiExCorD+$tiPCCorD+$tiSCCorD+$tiTCCorD)/$total)*100,2)}}%</td>
+         </tr>
+
+        <tr>
+          <td>LGAC Contam. Ambiental</td> 
+          <td class="success">{{round($pQ=(($tiPCCorD/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCCorD/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCCorD/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExCorD/$total)*100,2)}}%</td>
+          <td>{{round((($tiExCorD+$tiPCCorD+$tiSCCorD+$tiTCCorD)/$total)*100,2)}}%</td>
+         </tr>
+
+        <tr>
+          <td>LGAC Ing.Software y simulacion social</td> 
+          <td class="success">{{round($pQ=(($tiPCISSD/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCISSD/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCISSD/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExISSD/$total)*100,2)}}%</td>
+          <td>{{round((($tiExISSD+$tiPCISSD+$tiSCISSD+$tiTCISSD)/$total)*100,2)}}%</td>
+         </tr>
+
+        <tr>
+          <td>LGAC Computo movil y oblicuo</td> 
+          <td class="success">{{round($pQ=(($tiPCCUD/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCCUD/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCCUD/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExCUD/$total)*100,2)}}%</td>
+          <td>{{round((($tiExCUD+$tiPCCUD+$tiSCCUD+$tiTCCUD)/$total)*100,2)}}%</td>
+         </tr>
+
+        <tr>
+          <td>LGAC Sistemas electri._y_electronicos</td> 
+          <td class="success">{{round($pQ=(($tiPCSEED/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCSEED/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCSEED/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExSEED/$total)*100,2)}}%</td>
+          <td>{{round((($tiExSEED+$tiPCSEED+$tiSCSEED+$tiTCSEED)/$total)*100,2)}}%</td>
+         </tr>
+
+        <tr>
+          <td>Manufactura produccion_y_calidad</td> 
+          <td class="success">{{round($pQ=(($tiPCMPAD/$total)*100),2)}}%</td>
+          <td class="success">{{round($sQ=(($tiSCMPAD/$total)*100),2)}}%</td>
+          <td class="warning">{{round($tQ=(($tiTCMPAD/$total)*100),2)}}%</td>
+          <td class="success">{{round($pQ+$sQ,2)}}%</td>
+          <td class="success">{{round($pQ+$sQ+$tQ,2)}}%</td>
+          <td class="danger">{{round(($tiExMPAD/$total)*100,2)}}%</td>
+          <td>{{round((($tiExMPAD+$tiPCMPAD+$tiSCMPAD+$tiTCMPAD)/$total)*100,2)}}%</td>
+         </tr>
+
+          </table> 
+
+      
   
             
   </body>
@@ -308,8 +361,11 @@
   top:-15%;
   left: 20px;
 }
-</style>
 
+#tabla{
+  font-size: 0.9em;
+}
+</style>
 
 
  

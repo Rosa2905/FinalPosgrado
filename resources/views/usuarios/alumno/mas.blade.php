@@ -25,6 +25,8 @@
         $hola=$interval->format('%y años,%m mes');
         if($Alumno->estatus=='Extemporaneo')
             $hola='Fuera de tiempo';
+        elseif($Alumno->estatus=='1' || $Alumno->estatus=='2' || $Alumno->estatus=='3')
+            $hola=$Alumno->estatus;
         else{
         if($hola <= '2'){
             $hola='1';}
@@ -36,6 +38,7 @@
             $hola='Fuera de tiempo';
         }
     }
+    
      //echo"<input type='text' name='titulo' class ='titulo'  value=".$interval->format('%R%a días').">"; 
     ?>
              

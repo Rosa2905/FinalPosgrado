@@ -128,7 +128,7 @@ input[type=text]{
   box-sizing: border-box;
   border: 2.2px solid #81c784;
   font-weight:bold;
-  top: -530px;
+  top: -490px;
   position: relative;
   left: 290px;
 
@@ -149,7 +149,7 @@ input[type=text]{
   box-sizing: border-box;
   border: 2.2px solid #81c784;
   font-weight:bold;
-  top: -915px;
+  top: -840px;
   position: relative;
   left: 550px;
  
@@ -174,7 +174,7 @@ input[type=text]{
 
 .boton{
   position: relative;
-  top: -830px;
+  top: -780px;
   left: 300px;
   
 }
@@ -194,7 +194,7 @@ input[type=text]{
 .dir
 {
   position: relative;
-  top: -520px;
+  top: -470px;
   left: 290px;
   display: inline-block;
   border-radius: 4px;
@@ -204,7 +204,7 @@ input[type=text]{
 .lafein
 {
   position: relative;
-  top: -900px;
+  top: -790px;
   left: 555px;
 }
 

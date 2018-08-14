@@ -78,13 +78,13 @@
 
 		<br><input  type="text" REQUIRED name="dirtesis"  placeholder="Dir. Tesis" class="dir"><br>
 		<input type="text" REQUIRED name="cotesis" placeholder="Co.Tesis" class="dir"><br>
-		<input type="text" REQUIRED name="SAGCC"  placeholder="SAGCC" class="dir"><br><br> 
+
 		
 	
 		<select   REQUIRED name="LGAC" class="eleccion2" onchange="return lgac();">
 			<option value='no' selected >- LGAC Asociada -</b></option>
 			<option value='Bioquimica'>Bioquimica</option>
-			<option value='Corrocion y Materiales'>Corrocion y Materiales</option>
+			<option value='Corrocion y Materiales'>Corrosion y Materiales</option>
 			<option value='Contaminacion Ambiental'>Contaminacion Amb.</option>
 			<option value='Ing.Software y simulacion social'>Ing.Soft y simulacion social </option>
 			<option value='Computo movil y oblicuo'>Computo movil y oblicuo</option>

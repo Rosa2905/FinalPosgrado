@@ -28,6 +28,7 @@ Route::prefix('usuarios')->group(function() {
 	Route::get('alumno/{num}/indDoctorado','AlumnoController@indDoctorado');
 	Route::get('alumno/{num}/indicador','AdminController@indicador');
 	Route::patch('alumno/edit/{id}','AlumnoController@update')->name('upedit');
+	Route::patch('alumno/editP/{id}','AlumnoController@updatePos')->name('upeditPos');
 });
 
 Route::get('usuarios/alumno/all', 'AlumnoController@all');
