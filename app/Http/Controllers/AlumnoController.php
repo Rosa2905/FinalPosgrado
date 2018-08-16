@@ -84,13 +84,17 @@ class AlumnoController extends Controller
 	public function reporte($id,$num){
 		$Alumno = Alum::findOrFail($id);
 		if($num==1){
-		$pdf = PDF::loadView("usuarios.alumno.reporte",["Alumno"=>$Alumno]);
-        return $pdf->download('listado.pdf');
+			$pdf = PDF::loadView("usuarios.alumno.reporte",["Alumno"=>$Alumno]);
+        	return $pdf->download('listado.pdf');
+   		}
+	    elseif($num==2){
+	    	$pdf = PDF::loadView("usuarios.alumno.reporte1",["Alumno"=>$Alumno]);
+	        return $pdf->download('listado.pdf');
    		 }
-    elseif($num==2){
-    	$pdf = PDF::loadView("usuarios.alumno.reporte1",["Alumno"=>$Alumno]);
-        return $pdf->download('listado.pdf');
-    }
+   		elseif($num==3){
+	    	$pdf = PDF::loadView("usuarios.alumno.Reportes.reporteAlumno",["Alumno"=>$Alumno]);
+	        return $pdf->download('listado.pdf');
+   		}
 
     	
 	}

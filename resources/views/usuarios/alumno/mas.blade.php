@@ -23,21 +23,39 @@
         $interval = $datetime1->diff($datetime2);
         $tiempo = $interval->format('%y años,%m mes');
         $hola=$interval->format('%y años,%m mes');
-        if($Alumno->estatus=='Extemporaneo')
-            $hola='Fuera de tiempo';
-        elseif($Alumno->estatus=='1' || $Alumno->estatus=='2' || $Alumno->estatus=='3')
-            $hola=$Alumno->estatus;
-        else{
-        if($hola <= '2'){
-            $hola='1';}
-        elseif($hola >'2' and $hola <='2.5'){
-            $hola='2';}
-        elseif($hola >'2.5' and $hola <='3'){
-            $hola='3';}
-        else{
-            $hola='Fuera de tiempo';
+        if($Alumno->grado=='MC' || $Alumno->grado=='MI'){
+            if($Alumno->estatus=='Extemporaneo')
+                $hola='Fuera de tiempo';
+            elseif($Alumno->estatus=='1' || $Alumno->estatus=='2' || $Alumno->estatus=='3')
+                $hola=$Alumno->estatus;
+            else{
+                if($hola <= '2')
+                    $hola='1';
+                elseif($hola >'2' and $hola <='2.5')
+                    $hola='2';
+                elseif($hola >'2.5' and $hola <='3')
+                    $hola='3';
+                else
+                    $hola='Fuera de tiempo';
+                }
         }
-    }
+        if($Alumno->grado=='DC' || $Alumno->grado=='DI')
+        {
+            if($Alumno->estatus=='Extemporaneo')
+                $hola='Fuera de tiempo';
+            elseif($Alumno->estatus=='1' || $Alumno->estatus=='2' || $Alumno->estatus=='3')
+                $hola=$Alumno->estatus;
+            else{
+                if($hola <= '3.5')
+                    $hola='1';
+                elseif($hola >'2' and $hola <='4')
+                    $hola='2';
+                elseif($hola >'2.5' and $hola <='4.5')
+                    $hola='3';
+                else
+                    $hola='Fuera de tiempo';
+                }
+        }
     
      //echo"<input type='text' name='titulo' class ='titulo'  value=".$interval->format('%R%a días').">"; 
     ?>
@@ -85,6 +103,7 @@
         </tr>
       </table>     
     </section>
+      <button id="reporte1" onclick="location.href='{{URL::action('AlumnoController@reporte',[$Alumno->id,$num=3])}}'" class="btn btn-success" >Reporte Alumno<br/></button> 
    {{--  <div class="modal-body"><center>
         <button  onclick="location.href='{{URL::action('AlumnoController@reporte',[$Alumno->id,$num=1])}}'"class="btn btn-success editar">
         <span class=" glyphicon glyphicon-download"></span> Reporte Constancia</button></a> 

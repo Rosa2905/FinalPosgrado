@@ -140,7 +140,7 @@ class AdminController extends Controller
         return $hola= view("usuarios.alumno.indiGlobal",$arreglo);
        }     
         elseif($num==1){
-             $pdf = PDF::loadView("usuarios.alumno.indiGlobalpdf",$arreglo);
+             $pdf = PDF::loadView("usuarios.alumno.Reportes.indiGlobalpdf",$arreglo);
             //  return $pdf->download('listado.pdf')->setPaper('a4')->setOrientation('landscape');
               $pdf->setPaper('A4', 'landscape');
             return $pdf->stream('test_pdf.pdf');
@@ -149,14 +149,20 @@ class AdminController extends Controller
             return $hola= view("usuarios.alumno.indiGlobalDoc",$arregloD);
           }
          elseif($num==3){
-             $pdf = PDF::loadView("usuarios.alumno.reporteDoc",$arregloD);
+             $pdf = PDF::loadView("usuarios.alumno.Reportes.reporteDoc",$arregloD);
             //  return $pdf->download('listado.pdf')->setPaper('a4')->setOrientation('landscape');
               $pdf->setPaper('A4', 'landscape');
             return $pdf->stream('test_pdf.pdf');
           }
         elseif($num==4){
-            $pdf = PDF::loadView("usuarios.alumno.reporteCorreos",["tabla"=>$tabla]);
+            $pdf = PDF::loadView("usuarios.alumno.Reportes.reporteCorreos",["tabla"=>$tabla]);
              return $pdf->download('listado.pdf');
+        }
+        elseif($num==5){
+            $pdf = PDF::loadView("usuarios.alumno.Reportes.reporteAlumno",$arregloD);
+            //  return $pdf->download('listado.pdf')->setPaper('a4')->setOrientation('landscape');
+              $pdf->setPaper('A4', 'landscape');
+            return $pdf->stream('test_pdf.pdf');
         }
         
     }

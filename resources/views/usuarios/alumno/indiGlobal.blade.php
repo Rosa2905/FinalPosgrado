@@ -19,7 +19,7 @@ $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
 @extends('layouts.alumno')
 @section('content')
 <div class="topnav" >
-  <a class="active" href="{{URL::action('AlumnoController@index')}}"><span class="  glyphicon glyphicon-circle-arrow-left "></span> Regresar</a>
+  <a class="active" href="{{URL::action('AdminController@index')}}"><span class="  glyphicon glyphicon-circle-arrow-left "></span> Regresar</a>
   <img src="{{ asset('imagen/esta.png') }}" class="pull-right"  width="94" height="46"> 
 </div>
     <div class="row">
