@@ -1,3 +1,16 @@
+@if(session()->has('message'))
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      {{ session()->get('message') }}
+  </div>
+@endif
+@if(session()->has('creado'))
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      {{ session()->get('creado') }}
+  </div>
+@endif
+
 @extends('layouts.alumno')
 @section('content')
    <div class="topnav" >

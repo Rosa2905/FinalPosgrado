@@ -86,6 +86,23 @@ box-shadow: 0 0 5px #999;
 }
 
 
+.ex33 img {
+border: 5px solid #A3E4D7;
+border-radius: 170px 170px 170px 170px;
+
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+}
+.ex33 img:hover {
+-webkit-box-shadow: 0 0 5px #48C9B0;
+-moz-box-shadow: 0 0 5px #A3E4D7;
+-ms-box-shadow: 0 0 5px #A3E4D7;
+box-shadow: 0 0 5px #999;
+-webkit-transform:scale(1.1);transform:scale(1.1);
+}
+
+
 
 
 }

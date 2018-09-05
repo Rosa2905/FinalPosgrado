@@ -46,7 +46,7 @@
 		
 			 <p></p> 
 			 <select name ="cono" id="campoconocimiento" REQUIRED name="campoconocimiento" class="eleccion1" onchange="return campos();">
-				<option value='no' selected >- Campo Conocimiento -</b></option>
+				<option value='Quimica' selected >- Campo Conocimiento -</b></option>
 				<option value='Quimica'>Quimica</option>
 				<option value='Medio Ambiente'>Medio Ambiente</option>
 				<option value='Industrial'>Industrial</option>
@@ -61,7 +61,7 @@
 			</select><br><br><br>
 	
 			<select  REQUIRED name="grado" class="eleccion1" onchange="return grad();">
-				<option value='no' selected  >-Grado-</b></option>
+				<option value='MI' selected  >-Grado-</b></option>
 				<option value='MI'>MI</option>
 				<option value='MC'>MC</option>
 				<option value='DI'>DI</option>
@@ -75,11 +75,8 @@
 			</select>
 
 
-
 		<br><input  type="text" REQUIRED name="dirtesis"  placeholder="Dir. Tesis" class="dir"><br>
 		<input type="text" REQUIRED name="cotesis" placeholder="Co.Tesis" class="dir"><br>
-
-		
 	
 		<select   REQUIRED name="LGAC" class="eleccion2" onchange="return lgac();">
 			<option value='no' selected >- LGAC Asociada -</b></option>
@@ -92,15 +89,11 @@
 			<option value='Manufactura produccion y calidad'>Manufac produccion y calidad</option>
 		</select>
 	
-
-
-
-		</br></br></br><b><label class="lafein"> .Fecha ingreso </b></br><input name="cmbEleccion" id="cmbEleccion" type="date" class="lafein" onchange="return bus();"></label>
-		<br><label class="lafein"> .Fecha de egreso </label></b></br>
-		<b><label id="fechaideal" REQUIRED name='fechaideal' class="lafein">.            ------------------</label></b>
-		</br></br><b><label class="lafein"> .Fecha limite titulacion </b></br><input type="date" name="feegre" class="lafein"></label></br></br>
+		</br></br></br><b><label class="lafein"> .Fecha ingreso </b></br><input REQUIRED name="cmbEleccion" id="cmbEleccion" type="date" class="lafein" onchange="return bus();"></label>
+		<br><label class="lafein" name="lafein"> .Fecha de egreso </label></b></br>
+		<font color="green" font size="3"><b><textarea  class="lafein" id="fechaideal" name="fechaideal" rows="1" readonly="">-------</textarea></font></b>
+		</br></br><b><label class="lafein"> .Fecha limite titulacion </b></br><input type="date" REQUIRED name="feegre" class="lafein"></label></br></br>
 	
-
 	<a href="#" ><img class="imagen"   width=80%" src="{{ asset('imagen/esta.png') }}"></a>
 	{{-- <input  type="file" name="imagen"  class="subir"> --}}
 {{-- 	Image::make(input::file('photo')->resize(300,200)->save(foo.jpg)) --}}
@@ -127,9 +120,12 @@ function sumarDias(fecha, dias){
    // el mes es devuelto entre 0 y 11
    month=fecha.getMonth()+1;
    year=fecha.getFullYear();
-   miVariable=day+"-"+month+"-"+year;
+   if(month<10)
+   	miVariable=year+"-"+0+month+"-"+day;
+   else
+   	miVariable=year+"-"+month+"-"+day;
    //swal("-- Fecha de egreso ideal --", day+" / "+month+" / "+year);
-   swal("-- Fecha de egreso ideal --", day+" /"+month+" /"+year, "info");
+   swal("-- Fecha de egreso ideal --", year+" /"+month+" /"+day, "info");
    document.getElementById("fechaideal").innerHTML = miVariable;
 }
 	function bus(){

@@ -1,7 +1,14 @@
+<?php
+$pagina_anterior=$_SERVER['HTTP_REFERER'];
+if($pagina_anterior=='http://localhost:3000/ResPosgrado/public/usuarios/alumno/docente')
+  $variable='AlumnoController@Doinicio';
+else
+  $variable='AlumnoController@index';
+?>
 @extends('layouts.alumno')
 @section('content')
 <div class="topnav" >
-  <a class="active" href="{{URL::action('AlumnoController@index')}}"><span class="  glyphicon glyphicon-circle-arrow-left "></span> Regresar</a>
+  <a class="active" href="{{URL::action($variable)}}"><span class="  glyphicon glyphicon-circle-arrow-left "></span> Regresar</a>
   <img src="{{ asset('imagen/esta.png') }}" class="pull-right"  width="94" height="46"> 
 </div>
     <div class="row">
@@ -24,10 +31,10 @@
         $tiempo = $interval->format('%y años,%m mes');
         $hola=$interval->format('%y años,%m mes');
         if($Alumno->grado=='MC' || $Alumno->grado=='MI'){
-            if($Alumno->estatus=='Extemporaneo')
+            if($Alumno->estatus=='Extemporaneo' || $Alumno->estatus=='Baja')
                 $hola='Fuera de tiempo';
-            elseif($Alumno->estatus=='1' || $Alumno->estatus=='2' || $Alumno->estatus=='3')
-                $hola=$Alumno->estatus;
+            elseif($Alumno->corte=='1' || $Alumno->corte=='2' || $Alumno->corte=='3')
+                $hola=$Alumno->corte;
             else{
                 if($hola <= '2')
                     $hola='1';
@@ -41,10 +48,10 @@
         }
         if($Alumno->grado=='DC' || $Alumno->grado=='DI')
         {
-            if($Alumno->estatus=='Extemporaneo')
+            if($Alumno->estatus=='Extemporaneo' || $Alumno->estatus=='Baja')
                 $hola='Fuera de tiempo';
-            elseif($Alumno->estatus=='1' || $Alumno->estatus=='2' || $Alumno->estatus=='3')
-                $hola=$Alumno->estatus;
+            elseif($Alumno->corte=='1' || $Alumno->corte=='2' || $Alumno->corte=='3')
+                $hola=$Alumno->corte;
             else{
                 if($hola <= '3.5')
                     $hola='1';

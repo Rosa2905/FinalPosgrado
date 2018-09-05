@@ -29,14 +29,17 @@ class UserLoginController extends Controller
       ]);
 
       // Attempt to log the user in
-  if (Auth::guard('web')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
+      if (Auth::guard('web')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
+        if($request->email=='ulises.sandoval@gpomct.com')
       //   // if successful, then redirect to their intended location 
          return redirect()->intended(route('user.dashboard'));
+       else
+         return redirect()->intended(route('Docente.dashboard'));
 
       }
 
       // if unsuccessful, then redirect back to the login with the form data
-      return redirect()->back()->withInput($request->only('email', 'remember'));
+      return redirect()->back()->withInput($request->only('email', 'remember'))->with('warning', 'Your account has not yet been activated. Please check Your email');;
     }
 
 

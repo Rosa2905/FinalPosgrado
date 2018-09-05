@@ -6,25 +6,26 @@ $BI=$baBi+$tiExBi+$tiPCBi+$tiSCBi+$tiTCBi;$LCM=$baCor+$tiExCor+$tiPCCor+$tiSCCor
 $CA=$baCA+$tiExCA+$tiPCCA+$tiSCCA+$tiTCCA;$ISS=$baISS+$tiExISS+$tiPCISS+$tiSCISS+$tiTCISS;
 $CU=$baCU+$tiExCU+$tiPCCU+$tiSCCU+$tiTCCU;$SEE=$baSEE+$tiExSEE+$tiPCSEE+$tiSCSEE+$tiTCSEE;
 $MPA=$baMPA+$tiExMPA+$tiPCMPA+$tiSCMPA+$tiTCMPA;
-
 $bT=$baQu+$baMA+$baIn+$baEl+$baCOM; $ExQu=$tiExQu+$tiExMA+$tiExIn+$tiExEl+$tiExCOM;
 $PCT=$tiPCQu+$tiPCMA+$tiPCIn+$tiPCEl+$tiPCCOM ;$SCT=$tiSCQu+$tiSCMA+$tiSCIn+$tiSCEl+$tiSCCOM;
 $TCT=$tiTCQu+$tiTCMA+$tiTCIn+$tiTCEl+$tiTCCOM; 
 $Vi=$ViQu+$ViMA+$ViIn+$ViEl+$ViCOM;$Te=$TeQu+$TeMA+$TeIn+$TeEl+$TeCOM;
 $total=$bT+$ExQu+$SCT+$TCT+$PCT; //Total Programa
-
-
+$pagina_anterior=$_SERVER['HTTP_REFERER'];
+//echo "<strong>$pagina_anterior</strong>";
+if($pagina_anterior=='http://localhost:3000/ResPosgrado/public/usuarios/inicio')
+  $variable='AdminController@index';
+else
+  $variable='AdminController@Docente';
 ?>
-
 @extends('layouts.alumno')
 @section('content')
 <div class="topnav" >
-  <a class="active" href="{{URL::action('AdminController@index')}}"><span class="  glyphicon glyphicon-circle-arrow-left "></span> Regresar</a>
+  <a class="active" href="{{URL::action($variable)}}"><span class="  glyphicon glyphicon-circle-arrow-left "></span> Regresar</a>
   <img src="{{ asset('imagen/esta.png') }}" class="pull-right"  width="94" height="46"> 
 </div>
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-            {{-- <h3>Alumno: {{ $Alumno->nombre}}</h3><br> --}}
             @if (count($errors)>0)
             <div class="alert alert-danger">
                 <ul>

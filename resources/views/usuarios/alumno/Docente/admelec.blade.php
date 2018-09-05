@@ -8,17 +8,13 @@
     @csrf</form>
     <a href="#" ><img class="rightedit"   width="20%" src="{{ asset('imagen/esta.png') }}"></a>
   </div>
-
-
-
-  <label id="finalizar" class="text-danger" name='finalizar'> Consulta Alumnos  </label>
-  <label id="grupoelegir" class="text-danger" name='finalizar'> Con quien desea trabajar: </label>
+  <label id="finalizar" class="text-primary" name='finalizar'> Consulta Alumnos  </label>
+  <label id="grupoelegir" class="text-primary" name='finalizar'>Con quien desea trabajar </label>
 {{--   <label id="reporte" class="text-danger" name='finalizar'> Reporte: </label> --}}
-
-  <div class="ex3">
-    <img id="containerEx3" width="12%" onclick="location.href='{{URL::action('AlumnoController@index')}}'" src="{{ asset('imagen/graduates.png') }}" alt="Cinque Terre" >
+  <div class="ex33">
+    <img id="containerEx3" width="12%" onclick="location.href='{{URL::action('AlumnoController@Doinicio')}}'" src="{{ asset('imagen/graduates.png') }}" alt="Cinque Terre" >
     <img id="alumno" width="12%"  src="{{ asset('imagen/presentation.png') }}" alt="Alumnos" >
-    <img  id="asignar" width="12%" onclick="location.href='{{URL::action('AlumnoController@index')}}'" src="{{ asset('imagen/asignar.png') }}" alt="Alumnos" >
+    <img  id="asignar" width="12%" onclick="location.href='{{URL::action('AlumnoController@Doinicio')}}'" src="{{ asset('imagen/asignar.png') }}" alt="Alumnos" >
     <label id="laDo" class="text-danger" > Alumnos  </label>
     <label id="laEs" class="text-danger" > Docentes   </label>
     <label id="laAs" class="text-danger" > Asignar </label>
@@ -87,7 +83,6 @@
   left: 120px;
   top:-75px;
 }
-
 #salir{
   position: relative;
   left: 1490px;

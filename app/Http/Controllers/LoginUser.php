@@ -15,18 +15,17 @@ class LoginUser extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:admin');
+        $this->middleware('auth');
     }
     /**
      * Show the application dashboard.
-     *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
          $Alumno = Alum::all();
         // return $Alumno;
-         return view('usuarios.alumno.admelecU',["Alumno"=>$Alumno]);
+         return view('usuarios.alumno.admelec');
         // return view('usuarios.alumno.admelec');
     }
 }

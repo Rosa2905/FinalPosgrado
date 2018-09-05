@@ -16,10 +16,10 @@ class AdminController extends Controller
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('auth:admin');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Show the application dashboard.
      *
@@ -31,11 +31,14 @@ class AdminController extends Controller
     public function index()
     {
          $Alumno = Alum::all();
-        // return $Alumno;
          return view('usuarios.alumno.admelec',["Alumno"=>$Alumno]);
-        // / return view('usuarios.alumno.admelec');
     }
 
+     public function Docente()
+    {
+         $Alumno = Alum::all();
+         return view('usuarios.alumno.Docente.admelec',["Alumno"=>$Alumno]);
+    }
 
     public function reporte($num){
        // $Alumno = Alum::findOrFail($id);
@@ -166,12 +169,4 @@ class AdminController extends Controller
         }
         
     }
-
-    //  public function ui()
-    // {
-    //      $Alumno = Alum::all();
-    //     // return $Alumno;
-    //      return view('usuarios.alumno.admelecU',["Alumno"=>$Alumno]);
-    //     // return view('usuarios.alumno.admelec');
-    // }
 }
